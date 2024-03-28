@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   create_list.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 15:33:54 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/27 08:12:34 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/03/28 21:30:58 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
 /**
- * Check si Double
+ * Check si Doublon.
 */
 int	check_duplicate(t_list *stack, int value)
 {
@@ -87,6 +87,7 @@ void	print_noeud_list(t_list *stack)
 	tmp = stack;
 	ft_printf("Value: %d, Index: %d\n", tmp->value, tmp->index);
 }
+
 /**
  * Reinitialisation des index a chaque mouvement.
 */
