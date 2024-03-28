@@ -1,0 +1,349 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    main.txt                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/03/20 21:00:39 by acabarba          #+#    #+#              #
+#    Updated: 2024/03/20 21:00:39 by acabarba         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+
+
+
+Changer le main dans le .h
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+main de test pour split argument et les metre dans un tableau de tableau
+
+------------------------------------------------------------------------------------
+
+int main(int argc, char **argv)
+{
+    char **result;
+    int i;
+
+    result = clean_argument(argc, argv);
+    for (i = 0; result[i] != NULL; i++)
+    {
+        printf("%s\n", result[i]);
+    }
+
+    // N'oubliez pas de libérer la mémoire allouée
+    for (i = 0; result[i] != NULL; i++)
+    {
+        free(result[i]);
+    }
+    free(result);
+
+    return 0;
+}
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+main de test pour les movements PUSH
+
+------------------------------------------------------------------------------------
+
+int main() 
+{
+    // Créer deux listes
+    t_list *stack_a = NULL;
+    t_list *stack_b = NULL;
+
+    // Ajouter des éléments à stack_a
+    for (int i = 0; i < 5; i++) {
+        t_list *nouveau = malloc(sizeof(t_list));
+        nouveau->value = i;
+        nouveau->index = i;
+        nouveau->next = stack_a;
+        stack_a = nouveau;
+    }
+
+    // Afficher stack_a
+    printf("stack_a avant push : ");
+    t_list *temp = stack_a;
+    while (temp != NULL) {
+        printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    // Effectuer un push de stack_a à stack_b
+    pb(&stack_a, &stack_b);
+
+    // Afficher stack_a et stack_b après le push
+    printf("stack_a après push : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    printf("stack_b après push : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+main de test pour test les mouvements SWAP
+
+------------------------------------------------------------------------------------
+
+int main() 
+{
+    // Créer deux listes
+    t_list *stack_a = NULL;
+    t_list *stack_b = NULL;
+
+    // Ajouter des éléments à stack_a
+    for (int i = 0; i < 5; i++) {
+        t_list *nouveau = malloc(sizeof(t_list));
+        nouveau->value = i;
+        nouveau->index = i;
+        nouveau->next = stack_a;
+        stack_a = nouveau;
+    }
+
+    // Afficher stack_a
+    ft_printf("stack_a avant sa : ");
+    t_list *temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un sa sur stack_a
+    sa(&stack_a);
+
+    // Afficher stack_a après le sa
+    ft_printf("stack_a après sa : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un sb sur stack_b
+    sb(&stack_b);
+
+    // Afficher stack_b après le sb
+    ft_printf("stack_b après sb : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un ss sur stack_a et stack_b
+    ss(&stack_a, &stack_b);
+
+    // Afficher stack_a et stack_b après le ss
+    ft_printf("stack_a après ss : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    ft_printf("stack_b après ss : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+main de test pour test les mouvements ROTATE
+
+------------------------------------------------------------------------------------
+
+int main() {
+    // Créer deux listes
+    t_list *stack_a = NULL;
+    t_list *stack_b = NULL;
+
+    // Ajouter des éléments à stack_a
+    for (int i = 0; i < 5; i++) {
+        t_list *nouveau = malloc(sizeof(t_list));
+        nouveau->value = i;
+        nouveau->index = i;
+        nouveau->next = stack_a;
+        stack_a = nouveau;
+    }
+
+    // Afficher stack_a
+    ft_printf("stack_a avant ra : ");
+    t_list *temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un ra sur stack_a
+    ra(&stack_a);
+
+    // Afficher stack_a après le ra
+    ft_printf("stack_a après ra : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un rb sur stack_b
+    rb(&stack_b);
+
+    // Afficher stack_b après le rb
+    ft_printf("stack_b après rb : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un rr sur stack_a et stack_b
+    rr(&stack_a, &stack_b);
+
+    // Afficher stack_a et stack_b après le rr
+    ft_printf("stack_a après rr : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    ft_printf("stack_b après rr : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    return 0;
+}
+
+
+
+
+
+------------------------------------------------------------------------------------
+
+main de test pour test les mouvements REVERSE_ROTATE
+
+------------------------------------------------------------------------------------
+
+int main() {
+    // Créer deux listes
+    t_list *stack_a = NULL;
+    t_list *stack_b = NULL;
+
+    // Ajouter des éléments à stack_a
+    for (int i = 0; i < 5; i++) {
+        t_list *nouveau = malloc(sizeof(t_list));
+        nouveau->value = i;
+        nouveau->index = i;
+        nouveau->next = stack_a;
+        stack_a = nouveau;
+    }
+
+    // Afficher stack_a
+    ft_printf("stack_a avant rra : ");
+    t_list *temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un rra sur stack_a
+    rra(&stack_a);
+
+    // Afficher stack_a après le rra
+    ft_printf("stack_a après rra : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un rrb sur stack_b
+    rrb(&stack_b);
+
+    // Afficher stack_b après le rrb
+    ft_printf("stack_b après rrb : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    // Effectuer un rrr sur stack_a et stack_b
+    rrr(&stack_a, &stack_b);
+
+    // Afficher stack_a et stack_b après le rrr
+    ft_printf("stack_a après rrr : ");
+    temp = stack_a;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    ft_printf("stack_b après rrr : ");
+    temp = stack_b;
+    while (temp != NULL) {
+        ft_printf("%d ", temp->value);
+        temp = temp->next;
+    }
+    ft_printf("\n");
+
+    return 0;
+}

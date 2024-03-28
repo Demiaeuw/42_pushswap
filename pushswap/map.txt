@@ -1,0 +1,86 @@
+include
+	.h
+srcs
+	create_liste
+		Créer les stack A et B, les remplis avec les arguments.
+		Check si tout est ok (int etc.).
+	error
+		Gestion des erreurs.
+		Gestion des leak.
+	mouvement
+		Fonction pour les mouvement de trie lié au sujet.
+	specifique_trie
+		Fontion qui gère si la liste passé en argument est déjà triée ou non.
+		Trie les cas specifique : 1 / 2 / 3 .
+	step_by_step
+		Coeur du programme, avec l'execution des etapes une par une qui seront appelé dans le main.
+	trie
+		Fonction qui font l'algo de trie.
+		Choisir une target.
+		Calcul des mouvements pour le trie.
+	utils
+		Toutes les fonctions general pour le programme.
+		Ajout de ft_printf.
+
+
+
+
+
+
+||-------------------------------------------------------------|	Gestion d'erreur	|-------------------------------------------------------------||
+
+
+
+
+1	gerer tout type d'arguments ("" ou non et les deux)						fait
+
+2	gerer si c'est bien des int									fait
+
+3	gerer si c'est pas plus grand ou plus petit qu'un int						fait
+
+4	gerer si pas de doublons dans les entrées							fait
+
+5	gerer si la liste est deja trier ou non								fait
+
+						
+||-------------------------------------------------------------|	Problemes a gerer	|-------------------------------------------------------------||
+
+Leack lors du trie sur les liste que je ne free peut etre pas
+
+||-------------------------------------------------------------|	travail a faire		|-------------------------------------------------------------||
+
+
+0 >>	Reinitialisé les index a chaque mouvement. 							fait 
+
+1 >> 	Push les 2 premiers.										fait
+
+2 >> 	Choisir les targets.										fait
+
+3 >> 	La target est toujours plus petit que la source (et le plus proche possible).			fait
+	Si pas de plus petit c'est donc le plus grand.
+	Ajouter cette ttarget a la struct.
+
+4 >>	Trouvé l'action qui coute le moins chere pour envoyé A vers B et le faire.
+
+5 >>	Tout reinitialisé (index / target) et recommencer.
+
+6 >>	
+
+
+
+
+FIN >>	Gerer 4 arguments
+
+
+
+
+
+
+||-------------------------------------------------------------|	Check Final		|-------------------------------------------------------------||
+
+
+verifier que tous compile.										pas fait
+verifier la norme.											pas fait
+verifier la le main.											pas fait
+verifier les leack valgrind.										pas fait
+verifier si pas de reste de printf ou autre.								pas fait
