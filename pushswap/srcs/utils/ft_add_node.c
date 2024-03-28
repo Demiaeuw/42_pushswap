@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   trie01.c                                           :+:      :+:    :+:   */
+/*   ft_add_node.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/26 16:36:10 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 20:01:57 by acabarba         ###   ########.fr       */
+/*   Created: 2024/03/28 19:12:52 by acabarba          #+#    #+#             */
+/*   Updated: 2024/03/28 19:38:34 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
-/**
- * Push tout dans stack_b sauf 3 et trie les 3.
- * Ajout de la target dans Stack_b.
-*/
-void	trie_step_01(t_data *data)
+t_list	*new_node(int value)
 {
-	while (ft_lstsize(data->stack_a) > 3)
-		pb(&(data->stack_a), &(data->stack_b));
-	three_entry(&(data->stack_a));
-	reset_index(data->stack_a);
-	reset_index(data->stack_b);
-	find_target(data);
+	t_list	*new;
+
+	new = malloc(sizeof(*new));
+	if (!new)
+		return (NULL);
+	new->value = value;
+	new->next = NULL;
+	return (new);
 }
 
-// void	trie_step_02(t_data *data)
-// {
-	
-// }
+void	add_front(t_list **stack, t_list *new)
+{
+	new->next = *stack;
+	*stack = new;
+}

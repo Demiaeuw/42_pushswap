@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 19:20:27 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/27 08:52:35 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/03/28 19:35:24 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,19 @@
 
 int	push(t_list **stack_to, t_list **stack_from)
 {
-	t_list	*temp;
-	t_list	*main_to;
 
+	t_list	*to_add;
+	t_list	*new;
+	
 	if (ft_lstsize(*stack_from) == 0)
 		return (-1);
-	main_to = *stack_to;
-	temp = *stack_from;
-	*stack_from = (*stack_from)->next;
-	if (!main_to)
-	{
-		main_to = temp;
-		main_to->next = NULL;
-		*stack_to = main_to;
-	}
-	else
-	{
-		temp->next = main_to;
-		*stack_to = temp;
-	}
+
+	to_add = *stack_from;
+	new = new_node(to_add->value);
+	*stack_from = to_add->next;
+	to_add->next = NULL;
+	add_front(stack_to, new);
+	free(to_add);
 	return (0);
 }
 

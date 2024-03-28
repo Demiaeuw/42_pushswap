@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/20 00:17:41 by acabarba          #+#    #+#              #
-#    Updated: 2024/03/20 00:17:41 by acabarba         ###   ########.fr        #
+#    Updated: 2024/03/28 19:23:09 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRCS =	main.c\
 	srcs/trie/target_mouve.c\
 	srcs/trie/target_trie.c\
 	srcs/trie/trie01.c\
+	srcs/utils/ft_add_node.c\
 	srcs/utils/ft_atoi.c\
 	srcs/utils/ft_atol.c\
 	srcs/utils/ft_lstlast.c\

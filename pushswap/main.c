@@ -8,7 +8,10 @@ int	main(int ac, char **av)
 	step01(ac, av, &data);
 	step02(ac, av, &data);
 	// step03(&data);
+	ft_printf("\nstack A\n\n");
 	print_list(data.stack_a);
+	ft_printf("\nstack B\n\n");
+	print_list(data.stack_b);
 	// if (ac == 2)
 	// {
 	// 	ft_printf("\nliste comme recus\n\n");

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 18:16:22 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/27 09:03:58 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/03/28 20:09:19 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ typedef struct s_list
 	int	value;
 	int	index;
 	int	target;
-	struct s_list	*prev;
 	struct s_list	*next;
 }				t_list;
 
@@ -133,18 +132,20 @@ void	step_end(t_data *data);
 
 
 /*		target_trie		*/
-t_list	*target_minus_prox(t_list *stack, int stack_value);
+int	target_minus_prox(t_list *stack, int stack_value);
 t_list	*max_value(t_list *stack);
 t_list	*minus_value(t_list *stack);
-void	target_to_node(t_data *data);
+void	find_target(t_data *data);
 
 /*		trie01			*/
 void	trie_step_01(t_data *data);
-void	trie_step_02(t_data *data);
+// void	trie_step_02(t_data *data);
 
 /*
  *								UTILS
 */
+t_list	*new_node(int value);
+void	add_front(t_list **stack, t_list *new);
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
 t_list	*ft_lstlast(t_list *lst);

@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 17:22:35 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/27 17:22:35 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/03/28 20:14:12 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
  * Fonction qui trouve la plus grand occurance en dessous de la source
  * Si pas trouvé : le plus grand
 */
-t_list	*target_minus_prox(t_list *stack, int stack_value)
+int	target_minus_prox(t_list *stack, int stack_value)
 {
 	t_list	*minus_prox;
 	t_list	*current_node;
@@ -26,7 +26,7 @@ t_list	*target_minus_prox(t_list *stack, int stack_value)
 	if (stack == NULL)
 	{
 		errorsorted();
-		return (NULL);
+		return (-1);
 	}
 	while (current_node != NULL)
 	{
@@ -37,10 +37,11 @@ t_list	*target_minus_prox(t_list *stack, int stack_value)
 		current_node = current_node->next;
 	}
 	if (minus_prox != NULL)
-		return (minus_prox);
+		return (minus_prox->value);
 	else
-		return (max_value(stack));
+		return (max_value(stack)->value);
 }
+
 
 /**
  * Fonction qui trouve la plus grande valeur dans la liste
@@ -81,16 +82,16 @@ t_list	*minus_value(t_list *stack)
 }
 
 /**
- * Ajout des targets a la premiere node dans la stack_b.
+ * Ajout des targets a toutes les nodes dans la stack_b.
 */
-void	target_to_node(t_data *data)
+void	find_target(t_data *data)
 {
-	t_list	*stack_b;
-	t_list	*target_node;
+	t_list	*aux;
 
-	stack_b = data->stack_b;
-	target_node = target_minus_prox(data->stack_a, stack_b->value);
-	if (target_node != NULL) {
-		stack_b->target = target_node->value;
+	aux = data->stack_b;
+	while (aux)
+	{
+		aux->target = target_minus_prox(data->stack_a, aux->value);
+		aux = aux->next;
 	}
 }
