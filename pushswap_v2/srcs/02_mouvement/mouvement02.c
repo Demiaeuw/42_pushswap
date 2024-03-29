@@ -24,7 +24,7 @@ void	sb(t_stack **stack_a, t_stack **stack_b)
 {
 	(void)stack_a;
 	swap(stack_b);
-	ft_printf("sa\n");
+	ft_printf("sb\n");
 	return ;
 }
 

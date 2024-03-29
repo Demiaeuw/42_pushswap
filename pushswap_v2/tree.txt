@@ -26,7 +26,8 @@ srcs
 		mouvement02	-> Swap.
 		mouvement03	-> Rotate.
 		mouvement04	-> Reverse_rotate.
+	03_trie
+		
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.
 		utils_pushswap	-> Fonction utiles en lien avec pushswap.
-		
