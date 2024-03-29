@@ -75,12 +75,23 @@ void	rra(t_stack **stack_a, t_stack **stack_b);
 void	rrb(t_stack **stack_a, t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 
+/*		03_trie			*/
+void	one_entry(t_stack **stack);
+void	two_entry(t_stack **stack_a, t_stack **stack_b);
+void	tree_entry(t_stack **stack_a, t_stack **stack_b);
+void	entry_check(t_stack **stack_a, t_stack **stack_b);
+void	pre_trie(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
 long	ft_atol(const char *str);
 void	add_front(t_stack **stack, t_stack *new);
 t_stack	*ft_lstlast(t_stack *lst);
+t_stack	*lf_big_node(t_stack *stack);
+t_stack	*lf_low_node(t_stack *stack);
+int	lst_mediane_value(t_stack *stack);
+t_stack	*lf_mediane_node(t_stack *stack);
+int	lst_half_max_value(t_stack *stack);
 int	ft_lstsize(t_stack *lst);
 void	ft_putendl_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);

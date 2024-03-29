@@ -20,7 +20,6 @@ void	push(t_stack **stack_from, t_stack **stack_to)
 	
 	if (ft_lstsize(*stack_from) == 0)
 		return ;
-
 	to_add = *stack_from;
 	new = new_node(to_add->value);
 	*stack_from = to_add->next;

@@ -27,6 +27,8 @@ srcs
 		mouvement03	-> Rotate.
 		mouvement04	-> Reverse_rotate.
 	03_trie
+		trie00	-> Trie specifique 1 2 3 entrée.
+		trie01	-> trouvé mediane de la liste + pb avec prè trie.
 		
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.

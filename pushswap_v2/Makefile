@@ -26,12 +26,17 @@ SRCS =	main.c\
 	srcs/02_mouvement/mouvement01.c\
 	srcs/02_mouvement/mouvement02.c\
 	srcs/02_mouvement/mouvement03.c\
-	srcs/02_mouvement/mouvement04.c
+	srcs/02_mouvement/mouvement04.c\
+	srcs/03_trie/trie00.c\
+	srcs/03_trie/trie01.c
 
 UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\
 	srcs/utils/utils_pushswap/ft_lstaddfront.c\
 	srcs/utils/utils_pushswap/ft_lstlast.c\
+	srcs/utils/utils_pushswap/ft_lstlfbig.c\
+	srcs/utils/utils_pushswap/ft_lstlflow.c\
+	srcs/utils/utils_pushswap/ft_lstlfmed.c\
 	srcs/utils/utils_pushswap/ft_lstnewnode.c\
 	srcs/utils/utils_pushswap/ft_lstsize.c\
 	srcs/utils/utils_pushswap/ft_putendl_fd.c\
