@@ -12,15 +12,12 @@
 
 #include "../../../include/push_swap.h"
 
-void	print_list(t_stack *stack)
+void print_list(t_stack *stack)
 {
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp != NULL)
+	while (stack)
 	{
-		ft_printf("Value: %d, Index: %d, Target : %d\n",
-			tmp->value, tmp->index, tmp->target);
-		tmp = tmp->next;
+		printf("Value: %d, Index: %d, Target : %d\n", stack->value, stack->index, stack->target ? stack->target->value : -1);
+		stack = stack->next;
 	}
 }
+

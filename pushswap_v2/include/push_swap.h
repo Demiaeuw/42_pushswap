@@ -23,7 +23,7 @@ typedef struct	s_stack
 {
 	int	value;
 	int	index;
-	int	target;
+	struct s_stack	*target;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -81,6 +81,9 @@ void	two_entry(t_stack **stack_a, t_stack **stack_b);
 void	tree_entry(t_stack **stack_a, t_stack **stack_b);
 void	entry_check(t_stack **stack_a, t_stack **stack_b);
 void	pre_trie(t_stack **stack_a, t_stack **stack_b);
+void	set_target(t_stack **stack_a, t_stack **stack_b);
+void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
+void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
