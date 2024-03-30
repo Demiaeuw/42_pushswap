@@ -85,6 +85,8 @@ void	pre_trie(t_stack **stack_a, t_stack **stack_b);
 void	set_target(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
+void	main_index(t_stack **stack_a, t_stack **stack_b);
+void	set_index(t_stack *stack);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
