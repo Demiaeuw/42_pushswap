@@ -3,15 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   trie00.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 02:32:38 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/29 02:32:38 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/03/29 20:40:01 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
 
+void	main_trie(t_stack **stack_a, t_stack **stack_b)
+{
+	pre_trie(stack_a, stack_b);
+	set_target(stack_a, stack_b);
+}
 void	one_entry(t_stack **stack)
 {
 	if ((*stack)->next == NULL)

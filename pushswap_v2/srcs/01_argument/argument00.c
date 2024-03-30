@@ -12,6 +12,24 @@
 
 #include "../../include/push_swap.h"
 
+void	main_argument(int ac, char **av, t_data *data)
+{
+	char	**dest;
+	int		i;
+
+	i = 0;
+	dest = clean_argument(ac, av);
+	check_arg_int(dest);
+	while (dest[i])
+	{
+		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);
+		i++;
+	}
+	liberer_str_tab(dest);
+	if (is_sorted(data->stack_a))
+		error_is_sorted(data);
+}
+
 /**
  * Split de tous les arguments dans une **str.
  * argument01
@@ -75,24 +93,4 @@ t_stack	*addint(t_stack *stack, int value, int index, char **dest)
 		return (stack);
 	}
 }
-/**
- * Gere les argument -> creer un **str -> ajoute ca au stack_a
- * step01
-*/
-void	argument(int ac, char **av, t_data *data)
-{
-	char	**dest;
-	int		i;
 
-	i = 0;
-	dest = clean_argument(ac, av);
-	check_arg_int(dest);
-	while (dest[i])
-	{
-		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);
-		i++;
-	}
-	liberer_str_tab(dest);
-	if (is_sorted(data->stack_a))
-		error_is_sorted(data);
-}

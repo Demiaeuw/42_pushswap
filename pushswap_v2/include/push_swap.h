@@ -48,10 +48,10 @@ void	liberer_str_tab(char **str);
 void	liberer_data(t_data *data);
 
 /*		01_argument		*/
+void	main_argument(int ac, char **av, t_data *data);
 char	**clean_argument(int ac, char **av);
 void	check_arg_int(char **str);
 t_stack	*addint(t_stack *stack, int value, int index, char **dest);
-void	argument(int ac, char **av, t_data *data);
 int	size_argument(int ac, char **av);
 char	*join_arguments(int ac, char **av);
 int	check_is_numbr(char **str);
@@ -76,6 +76,7 @@ void	rrb(t_stack **stack_a, t_stack **stack_b);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 
 /*		03_trie			*/
+void	main_trie(t_stack **stack_a, t_stack **stack_b);
 void	one_entry(t_stack **stack);
 void	two_entry(t_stack **stack_a, t_stack **stack_b);
 void	tree_entry(t_stack **stack_a, t_stack **stack_b);
@@ -105,6 +106,5 @@ int	is_sorted(t_stack *stack);
 t_stack	*new_node(int value);
 void	print_list(t_stack *stack);
 void	print_noeud_list(t_stack *stack);
-
 
 #endif
