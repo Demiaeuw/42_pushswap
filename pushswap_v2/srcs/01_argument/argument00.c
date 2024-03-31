@@ -20,6 +20,12 @@ void	main_argument(int ac, char **av, t_data *data)
 	i = 0;
 	dest = clean_argument(ac, av);
 	check_arg_int(dest);
+	if (ac == 1)
+	{
+		liberer_str_tab(dest);
+		liberer_data(data);
+		exit(0);
+	}
 	while (dest[i])
 	{
 		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);

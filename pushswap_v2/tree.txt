@@ -31,6 +31,7 @@ srcs
 		trie01	-> Trouvé mediane de la liste + pb avec prè trie.
 		trie02	-> Add de la target dans chaque noeud.
 		trie03	-> Gestion des index.	
+		tire04	-> Gestion de cost.
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.
 		utils_pushswap	-> Fonction utiles en lien avec pushswap.

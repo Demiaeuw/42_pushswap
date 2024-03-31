@@ -30,3 +30,17 @@ void	pre_trie(t_stack **stack_a, t_stack **stack_b)
 	}
 	return ;
 }
+
+// void	mvmt_med(t_stack **stack_a, t_stack **stack_b)
+// {
+// 	t_stack	*med;
+// 	t_stack *target_node;
+	
+
+// 	med = lf_mediane_node(stack_a);
+// 	while (stack_a != NULL)
+// 	{
+// 		if 
+// 	}
+
+// }

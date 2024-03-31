@@ -23,6 +23,7 @@ typedef struct	s_stack
 {
 	int	value;
 	int	index;
+	int	cost;
 	struct s_stack	*target;
 	struct s_stack	*next;
 }	t_stack;
@@ -87,6 +88,8 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
 void	main_index(t_stack **stack_a, t_stack **stack_b);
 void	set_index(t_stack *stack);
+void	main_cost(t_stack **stack_a, t_stack **stack_b);
+int	top_mouve_cost(t_stack **stack);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
@@ -98,6 +101,7 @@ t_stack	*lf_low_node(t_stack *stack);
 int	lst_mediane_value(t_stack *stack);
 t_stack	*lf_mediane_node(t_stack *stack);
 int	lst_half_max_value(t_stack *stack);
+int	lf_mediane_index(t_stack **stack);
 int	ft_lstsize(t_stack *lst);
 void	ft_putendl_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);

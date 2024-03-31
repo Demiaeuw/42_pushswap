@@ -44,3 +44,14 @@ int	lst_half_max_value(t_stack *stack)
 	max_value = lf_big_node(stack)->value;
 	return max_value / 2;
 }
+
+int	lf_mediane_index(t_stack **stack)
+{
+	int total_nodes;
+	int median_index;
+
+	total_nodes = ft_lstsize(*stack);
+	median_index = total_nodes / 2;
+
+	return (median_index);
+}
