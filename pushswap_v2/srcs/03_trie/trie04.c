@@ -14,40 +14,60 @@
 
 void	main_cost(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *current;
+	t_stack *temp_a;
+	t_stack *temp_b;
 
-	current = *stack_a;
-	while (current != NULL)
+	temp_a = *stack_a;
+	temp_b = *stack_b;
+	while (temp_a != NULL)
 	{
-		current->cost = top_mouve_cost(stack_a);
-		current = current->next;
+		temp_a->cost = (top_mouve_cost(*stack_a, temp_a) +
+				target_mouve_cost(temp_a, *stack_b) + 1);
+		temp_a = temp_a->next;
 	}
-	current = *stack_b;
-	while (current != NULL)
+	while (temp_b != NULL)
 	{
-		current->cost = top_mouve_cost(stack_b);
-		current = current->next;
+		temp_b->cost = (top_mouve_cost(*stack_b, temp_b) +
+			target_mouve_cost(temp_b, *stack_a) + 1);
+		temp_b = temp_b->next;
 	}
 }
 
-int	top_mouve_cost(t_stack *stack)
-{
-	t_stack	*current;
-	int median_index;
-	int total_nodes;
-	int cost;
 
-	current = stack;
-	median_index = lf_mediane_index(stack);
-	total_nodes = ft_lstsize(stack);
-	cost = 0;
-	while (current != NULL)
+int	top_mouve_cost(t_stack *stack, t_stack *node)
+{
+	int size;
+	int median;
+
+	size = ft_lstsize(stack);
+	median = size / 2;
+	if (node->index <= median)
 	{
-		if (current->index <= median_index)
-			cost += current->index;
-		else
-			cost += total_nodes - current->index;
-		current = current->next;
+		return (node->index);
 	}
-	return (cost);
+	else
+	{
+		return (size - node->index);
+	}
+}
+
+int	target_mouve_cost(t_stack *stack_a, t_stack *stack_b)
+{
+	int size;
+	int median;
+	t_stack *target_node;
+
+	size = ft_lstsize(stack_b);
+	median = size / 2;
+	target_node = find_target(stack_b, stack_a->target->value);
+	if (target_node == NULL)
+		return -1;
+	if (target_node->index <= median)
+	{
+		return (target_node->index);
+	}
+	else
+	{
+		return (size - target_node->index);
+	}
 }

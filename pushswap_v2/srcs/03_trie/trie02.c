@@ -93,3 +93,16 @@ void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
 		temp_b = temp_b->next;
 	}
 }
+
+t_stack	*find_target(t_stack *stack, int target_value)
+{
+	t_stack *temp = stack;
+
+	while (temp != NULL)
+	{
+		if (temp->value == target_value)
+			return temp;
+		temp = temp->next;
+	}
+	return NULL;
+}
