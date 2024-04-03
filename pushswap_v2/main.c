@@ -29,6 +29,12 @@ int	main(int ac, char **av)
 		print_list(data.stack_a);
 		ft_printf("\nstack B\n\n");
 		print_list(data.stack_b);
+		trie_mouvement(&data.stack_a, &data.stack_b);
+		ft_printf("\nstack A\n\n");
+		print_list(data.stack_a);
+		ft_printf("\nstack B\n\n");
+		print_list(data.stack_b);
+
 	}
 	liberer_data(&data);
 	return (0);

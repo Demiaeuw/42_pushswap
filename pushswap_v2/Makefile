@@ -31,7 +31,8 @@ SRCS =	main.c\
 	srcs/03_trie/trie01.c\
 	srcs/03_trie/trie02.c\
 	srcs/03_trie/trie03.c\
-	srcs/03_trie/trie04.c
+	srcs/03_trie/trie04.c\
+	srcs/03_trie/trie05.c
 
 UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\

@@ -71,3 +71,24 @@ int	target_mouve_cost(t_stack *stack_a, t_stack *stack_b)
 		return (size - target_node->index);
 	}
 }
+
+t_stack	*lf_lower_cost(t_stack *stack)
+{
+	t_stack	*min_node;
+	t_stack	*current;
+	int	min_cost;
+
+	min_node = stack;
+	current = stack;
+	min_cost = stack->cost;
+	while (current != NULL)
+	{
+		if (current->cost < min_cost)
+		{
+			min_cost = current->cost;
+			min_node = current;
+		}
+		current = current->next;
+	}
+	return (min_node);
+}

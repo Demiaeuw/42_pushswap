@@ -92,6 +92,8 @@ void	set_index(t_stack *stack);
 void	main_cost(t_stack **stack_a, t_stack **stack_b);
 int	top_mouve_cost(t_stack *stack, t_stack *node);
 int	target_mouve_cost(t_stack *stack_a, t_stack *stack_b);
+t_stack	*lf_lower_cost(t_stack *stack);
+void	trie_mouvement(t_stack **stack_a, t_stack **stack_b);
 
 
 /*		utils			*/

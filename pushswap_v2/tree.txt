@@ -32,6 +32,7 @@ srcs
 		trie02	-> Add de la target dans chaque noeud.
 		trie03	-> Gestion des index.	
 		tire04	-> Gestion de cost.
+		tire05	-> Execution trie.
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.
 		utils_pushswap	-> Fonction utiles en lien avec pushswap.
