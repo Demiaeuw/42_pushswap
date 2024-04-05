@@ -86,14 +86,16 @@ void	pre_trie(t_stack **stack_a, t_stack **stack_b);
 void	set_target(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
-t_stack	*find_target(t_stack *stack, int target_value);
+t_stack	*lf_target(t_stack *stack, int target_value);
 void	main_index(t_stack **stack_a, t_stack **stack_b);
 void	set_index(t_stack *stack);
 void	main_cost(t_stack **stack_a, t_stack **stack_b);
 int	top_mouve_cost(t_stack *stack, t_stack *node);
 int	target_mouve_cost(t_stack *stack_a, t_stack *stack_b);
 t_stack	*lf_lower_cost(t_stack *stack);
-void	trie_mouvement(t_stack **stack_a, t_stack **stack_b);
+void	trie_core(t_stack **stack_a, t_stack **stack_b);
+void	bring_to_top_a(t_stack **stack_a, t_stack **stack_b, t_stack *node);
+void	bring_to_top_b(t_stack **stack_a, t_stack **stack_b, t_stack *node);
 
 
 /*		utils			*/

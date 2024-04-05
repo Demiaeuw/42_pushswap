@@ -59,7 +59,7 @@ int	target_mouve_cost(t_stack *stack_a, t_stack *stack_b)
 
 	size = ft_lstsize(stack_b);
 	median = size / 2;
-	target_node = find_target(stack_b, stack_a->target->value);
+	target_node = lf_target(stack_b, stack_a->target->value);
 	if (target_node == NULL)
 		return -1;
 	if (target_node->index <= median)

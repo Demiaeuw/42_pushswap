@@ -15,8 +15,10 @@
 void	main_trie(t_stack **stack_a, t_stack **stack_b)
 {
 	pre_trie(stack_a, stack_b);
+	tree_entry(stack_a, stack_b);
 	set_target(stack_a, stack_b);
 }
+
 void	one_entry(t_stack **stack)
 {
 	if ((*stack)->next == NULL)

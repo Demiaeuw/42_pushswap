@@ -94,7 +94,7 @@ void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
 	}
 }
 
-t_stack	*find_target(t_stack *stack, int target_value)
+t_stack	*lf_target(t_stack *stack, int target_value)
 {
 	t_stack *temp = stack;
 
