@@ -96,7 +96,8 @@ t_stack	*lf_lower_cost(t_stack *stack);
 void	trie_core(t_stack **stack_a, t_stack **stack_b);
 void	bring_to_top_a(t_stack **stack_a, t_stack **stack_b, t_stack *node);
 void	bring_to_top_b(t_stack **stack_a, t_stack **stack_b, t_stack *node);
-
+void	trie_de_fin(t_stack **stack_a, t_stack **stack_b);
+void	sort_stack_a(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
