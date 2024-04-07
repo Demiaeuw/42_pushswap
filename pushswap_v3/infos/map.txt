@@ -1,0 +1,44 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    map.txt                                            :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/07 16:32:50 by acabarba          #+#    #+#              #
+#    Updated: 2024/04/07 16:32:50 by acabarba         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+fait :
+
+	- Gestion d'erreurs.
+
+	- Gestion des Mallocs.
+		-> Free **str.
+		-> Free *str.
+		-> Free struct.
+
+	- Gestion d'arguments.
+		-> Faire un join de tous les arguments.
+		-> Faire un split de ce join.
+		-> Check si bon format.
+		-> Ajout de ce tableau de tableau dans la structure.
+
+
+a faire :
+
+	- Algo de trie		nombre de coup pour 100 valeurs : ????
+						     50 valeurs : ????
+						     10	valeurs : ????
+						      5 valeurs : ????
+						      3 valeurs : ????
+		-> Push les trois valeurs dans B.
+		-> commencer a trier pour qu'elles soient dans un ordre decroissant dans B.
+		-> Tout re-push dans A.
+
+
+	- Clean le code
+		-> Check les fonctions non autorisée.
+		-> Check norme.
+		-> Virer les commentaires.

@@ -1,0 +1,38 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    tree.txt                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/04/07 16:32:44 by acabarba          #+#    #+#              #
+#    Updated: 2024/04/07 16:32:44 by acabarba         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+srcs
+	00_error
+		error00	-> Fonction de gestion des erreurs.
+		error01	-> Fonction de gestion des erreurs.
+		free00	-> Fonction aui permet de free la memoire.
+	01_argument
+		argument00 -> Step de la gestion d'argument.
+		argument01 -> Creation du tableau de tableau d'argument.
+		argument02 -> Verification si c'est bien des 'int'.
+		argument03 -> Ajoute les arguments dans la t_data->stack_a et verifie si il y a des doublons.
+	02_mouvement
+		mouvement00	-> Mouvement principale : push / swap / rotate / reverse_rotate.
+		mouvement01	-> Push.
+		mouvement02	-> Swap.
+		mouvement03	-> Rotate.
+		mouvement04	-> Reverse_rotate.
+	03_infos
+		infos00	-> Gestion des index.
+		infos01 -> Gestion des targets.
+		infos02	-> Gestion des cost.
+	03_trie
+		trie00	-> Trie spécifique de 1 a 5 entrée.
+		trie01	->
+	utils
+		ft_printf	-> Ajout de la fonction printf maison.
+		utils_pushswap	-> Fonction utiles en lien avec pushswap.
