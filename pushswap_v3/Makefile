@@ -29,7 +29,9 @@ SRCS =	main.c\
 	srcs/02_mouvement/mouvement04.c\
 	srcs/03_infos/infos00.c\
 	srcs/03_infos/infos01.c\
-	srcs/03_infos/infos02.c
+	srcs/03_infos/infos02.c\
+	srcs/04_trie/trie00.c\
+	srcs/04_trie/trie01.c
 
 UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\

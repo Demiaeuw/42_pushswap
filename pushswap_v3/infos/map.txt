@@ -28,7 +28,7 @@ fait :
 
 a faire :
 
-	- Algo de trie		nombre de coup pour 100 valeurs : ????
+	- Algo de trie		nombre de coup pour 100 valeurs : 700
 						     50 valeurs : ????
 						     10	valeurs : ????
 						      5 valeurs : ????
@@ -41,4 +41,5 @@ a faire :
 	- Clean le code
 		-> Check les fonctions non autorisée.
 		-> Check norme.
+		-> Ajout de tout les "return".
 		-> Virer les commentaires.
