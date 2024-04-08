@@ -84,7 +84,9 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
 t_stack	*lf_target(t_stack *stack, int target_value);
 void	main_cost(t_stack **stack_a, t_stack **stack_b);
-int	lf_cost(t_stack *stack, t_stack **opposite_stack);
+void	init_cost(t_stack **stack_a, t_stack **stack_b);
+int	cost_a_top(t_stack *stack, t_stack *node);
+int	cost_target_top(t_stack *current, t_stack **stack_b);
 
 /*		04_trie			*/
 void	main_trie(t_stack **stack_a, t_stack **stack_b);
@@ -110,6 +112,7 @@ void	ft_putendl_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *c);
+int	get_max(int a, int b);
 void	init_data(t_data *data);
 int	is_sorted(t_stack *stack);
 t_stack	*new_node(int value);

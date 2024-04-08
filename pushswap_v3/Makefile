@@ -48,6 +48,7 @@ UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_split.c\
 	srcs/utils/utils_pushswap/ft_strlcpy.c\
 	srcs/utils/utils_pushswap/ft_strlen.c\
+	srcs/utils/utils_pushswap/get_max.c\
 	srcs/utils/utils_pushswap/init_data.c\
 	srcs/utils/utils_pushswap/is_sorted.c\
 	srcs/utils/utils_pushswap/print_list.c\
