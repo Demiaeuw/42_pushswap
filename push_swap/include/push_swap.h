@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
-#define PUSH_SWAP_H
+# define PUSH_SWAP_H
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
@@ -23,9 +23,9 @@ typedef struct s_stack
 {
 	struct s_stack	*target;
 	struct s_stack	*next;
-	int			value;
-	int			index;
-	int			cost;
+	int				value;
+	int				index;
+	int				cost;
 }	t_stack;
 
 typedef struct s_data
