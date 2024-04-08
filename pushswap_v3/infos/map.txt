@@ -28,11 +28,12 @@ fait :
 
 a faire :
 
-	- Algo de trie		nombre de coup pour 100 valeurs : 700
+	- Algo de trie		nombre de coup pour 500 valeurs : 5500
+						    100 valeurs : 700
 						     50 valeurs : ????
 						     10	valeurs : ????
 						      5 valeurs : ????
-						      3 valeurs : ????
+						      3 valeurs : 3
 		-> Push les trois valeurs dans B.
 		-> commencer a trier pour qu'elles soient dans un ordre decroissant dans B.
 		-> Tout re-push dans A.
