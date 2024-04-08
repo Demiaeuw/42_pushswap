@@ -23,7 +23,13 @@ fait :
 		-> Faire un join de tous les arguments.
 		-> Faire un split de ce join.
 		-> Check si bon format.
+			- int ?
+			- int_max/int_min ? 
+			- pas de doublon ?
+			- deja trié ?
 		-> Ajout de ce tableau de tableau dans la structure.
+	
+	- Implementation des mouvements.
 
 
 a faire :

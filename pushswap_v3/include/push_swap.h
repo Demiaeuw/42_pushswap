@@ -83,12 +83,16 @@ void	main_target(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
 t_stack	*lf_target(t_stack *stack, int target_value);
+void	main_cost(t_stack **stack_a, t_stack **stack_b);
+int	lf_cost(t_stack *stack, t_stack **opposite_stack);
 
 /*		04_trie			*/
 void	main_trie(t_stack **stack_a, t_stack **stack_b);
 void	step00(t_stack **stack_a, t_stack **stack_b);
 void	trie_deux(t_stack **stack_a, t_stack **stack_b);
 void	trie_trois(t_stack **stack_a, t_stack **stack_b);
+void	step01(t_stack **stack_a, t_stack **stack_b);
+void	step02(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
 int	ft_atoi(const char *str);

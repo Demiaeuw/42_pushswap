@@ -12,3 +12,9 @@
 
 #include "../../include/push_swap.h"
 
+void	step01(t_stack **stack_a, t_stack **stack_b)
+{
+	pb(stack_a, stack_b);
+	pb(stack_a, stack_b);
+	main_index(stack_a, stack_b);
+}
