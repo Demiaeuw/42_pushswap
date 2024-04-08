@@ -21,10 +21,10 @@ void	step03(t_stack **stack_a, t_stack **stack_b)
 	med = ft_lstsize(*stack_b) / 2;
 	if (minus_node->index > med)
 		while (minus_node->next != NULL)
-			rb(stack_a, stack_b);
+			rrb(stack_a, stack_b);
 	else
 		while (minus_node->next != NULL)
-			rrb(stack_a, stack_b);
+			rb(stack_a, stack_b);
 	while (*stack_b != NULL)
 		pa(stack_a, stack_b);
 }
