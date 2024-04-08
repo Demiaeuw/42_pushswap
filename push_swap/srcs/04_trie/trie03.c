@@ -108,7 +108,7 @@
 // 	main_reset_infos(stack_a, stack_b);
 // }
 
-void step02(t_stack **stack_a, t_stack **stack_b)
+void	step02(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*next_mouve;
 	int	cost_a;
@@ -127,72 +127,72 @@ void step02(t_stack **stack_a, t_stack **stack_b)
 	main_reset_infos(stack_a, stack_b);
 }
 
-void	handle_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
+void	handle_costs(t_stack **sa, t_stack **sb, int *ca, int *cb)
 {
-	if (*cost_a >= 0 && *cost_b >= 0)
-		handle_positive_costs(stack_a, stack_b, cost_a, cost_b);
-	else if (*cost_a < 0 && *cost_b < 0)
-		handle_negative_costs(stack_a, stack_b, cost_a, cost_b);
-	else if (*cost_a >= 0 && *cost_b < 0)
+	if (*ca >= 0 && *cb >= 0)
+		handle_positive_costs(sa, sb, ca, cb);
+	else if (*ca < 0 && *cb < 0)
+		handle_negative_costs(sa, sb, ca, cb);
+	else if (*ca >= 0 && *cb < 0)
 	{
-		handle_positive_costs(stack_a, stack_b, cost_a, cost_b);
-		handle_negative_costs(stack_a, stack_b, cost_a, cost_b);
+		handle_positive_costs(sa, sb, ca, cb);
+		handle_negative_costs(sa, sb, ca, cb);
 	}
-	else if (*cost_a < 0 && *cost_b >= 0)
+	else if (*ca < 0 && *cb >= 0)
 	{
-		handle_negative_costs(stack_a, stack_b, cost_a, cost_b);
-		handle_positive_costs(stack_a, stack_b, cost_a, cost_b);
+		handle_negative_costs(sa, sb, ca, cb);
+		handle_positive_costs(sa, sb, ca, cb);
 	}
 }
 
-void handle_positive_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
+void	handle_positive_costs(t_stack **sa, t_stack **sb, int *ca, int *cb)
 {
-	while (*cost_a > 0 && *cost_b > 0)
+	while (*ca > 0 && *cb > 0)
 	{
-		rr(stack_a, stack_b);
-		(*cost_a)--;
-		(*cost_b)--;
+		rr(sa, sb);
+		(*ca)--;
+		(*cb)--;
 	}
-	if (*cost_a > 0)
+	if (*ca > 0)
 	{
-		while (*cost_a > 0)
+		while (*ca > 0)
 		{
-			ra(stack_a, stack_b);
-			(*cost_a)--;
+			ra(sa, sb);
+			(*ca)--;
 		}
 	}
-	else if (*cost_b > 0)
+	else if (*cb > 0)
 	{
-		while (*cost_b > 0)
+		while (*cb > 0)
 		{
-			rb(stack_a, stack_b);
-			(*cost_b)--;
+			rb(sa, sb);
+			(*cb)--;
 		}
 	}
 }
 
-void handle_negative_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b)
+void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb)
 {
-	while (*cost_a < 0 && *cost_b < 0)
+	while (*ca < 0 && *cb < 0)
 	{
-		rrr(stack_a, stack_b);
-		(*cost_a)++;
-		(*cost_b)++;
+		rrr(sa, sb);
+		(*ca)++;
+		(*cb)++;
 	}
-	if (*cost_a < 0)
+	if (*ca < 0)
 	{
-		while (*cost_a < 0)
+		while (*ca < 0)
 		{
-			rra(stack_a, stack_b);
-			(*cost_a)++;
+			rra(sa, sb);
+			(*ca)++;
 		}
 	}
-	if (*cost_b < 0)
+	if (*cb < 0)
 	{
-		while (*cost_b < 0)
+		while (*cb < 0)
 		{
-			rrb(stack_a, stack_b);
-			(*cost_b)++;
+			rrb(sa, sb);
+			(*cb)++;
 		}
 	}
 }

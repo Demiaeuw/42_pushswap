@@ -97,9 +97,9 @@ void	trie_deux(t_stack **stack_a, t_stack **stack_b);
 void	trie_trois(t_stack **stack_a, t_stack **stack_b);
 void	step01(t_stack **stack_a, t_stack **stack_b);
 void	step02(t_stack **stack_a, t_stack **stack_b);
-void	handle_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
-void	handle_positive_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
-void	handle_negative_costs(t_stack **stack_a, t_stack **stack_b, int *cost_a, int *cost_b);
+void	handle_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
+void	handle_positive_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
+void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
 void	step03(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
