@@ -31,9 +31,6 @@ fait :
 	
 	- Implementation des mouvements.
 
-
-a faire :
-
 	- Algo de trie		nombre de coup pour 500 valeurs : 5500
 						    100 valeurs : 700
 						     50 valeurs : ????
@@ -44,9 +41,17 @@ a faire :
 		-> commencer a trier pour qu'elles soient dans un ordre decroissant dans B.
 		-> Tout re-push dans A.
 
+a faire :
 
 	- Clean le code
 		-> Check les fonctions non autorisée.
 		-> Check norme.
 		-> Ajout de tout les "return".
 		-> Virer les commentaires.
+
+
+
+Divers : 
+
+	- commande bash pour ajouter et lancer le visualizer
+		make && git clone https://github.com/o-reo/push_swap_visualizer.git && cd push_swap_visualizer && mkdir build && cd build && cmake .. && make && ./bin/visualizer
