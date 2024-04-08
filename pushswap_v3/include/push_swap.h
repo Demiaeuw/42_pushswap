@@ -79,6 +79,7 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 /*		03_infos		*/
 void	main_index(t_stack **stack_a, t_stack **stack_b);
 void	set_index(t_stack *stack);
+void	main_reset_infos(t_stack **stack_a, t_stack **stack_b);
 void	main_target(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
@@ -96,6 +97,7 @@ void	trie_deux(t_stack **stack_a, t_stack **stack_b);
 void	trie_trois(t_stack **stack_a, t_stack **stack_b);
 void	step01(t_stack **stack_a, t_stack **stack_b);
 void	step02(t_stack **stack_a, t_stack **stack_b);
+void	step03(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
 int	ft_atoi(const char *str);
@@ -116,6 +118,7 @@ size_t	ft_strlen(const char *c);
 int	get_max(int a, int b);
 void	init_data(t_data *data);
 int	is_sorted(t_stack *stack);
+t_stack	*lf_minus_cost(t_stack **stack_a);
 t_stack	*new_node(int value);
 void	print_list(t_stack *stack);
 void	print_noeud_list(t_stack *stack);

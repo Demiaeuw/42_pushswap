@@ -33,7 +33,8 @@ SRCS =	main.c\
 	srcs/04_trie/trie00.c\
 	srcs/04_trie/trie01.c\
 	srcs/04_trie/trie02.c\
-	srcs/04_trie/trie03.c
+	srcs/04_trie/trie03.c\
+	srcs/04_trie/trie04.c
 
 UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\
@@ -51,6 +52,7 @@ UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/get_max.c\
 	srcs/utils/utils_pushswap/init_data.c\
 	srcs/utils/utils_pushswap/is_sorted.c\
+	srcs/utils/utils_pushswap/lf_minus_cost.c\
 	srcs/utils/utils_pushswap/print_list.c\
 	srcs/utils/utils_pushswap/print_noeud_liste.c
 

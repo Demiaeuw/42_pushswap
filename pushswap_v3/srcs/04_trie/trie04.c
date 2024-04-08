@@ -12,3 +12,8 @@
 
 #include "../../include/push_swap.h"
 
+void	step03(t_stack **stack_a, t_stack **stack_b)
+{
+	while (*stack_b != NULL)
+		pa(stack_a, stack_b);
+}

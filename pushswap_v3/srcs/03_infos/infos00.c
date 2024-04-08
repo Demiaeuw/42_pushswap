@@ -32,3 +32,10 @@ void	set_index(t_stack *stack)
 		tmp = tmp->next;
 	}
 }
+
+void	main_reset_infos(t_stack **stack_a, t_stack **stack_b)
+{
+	main_index(stack_a, stack_b);
+	main_target(stack_a, stack_b);
+	main_cost(stack_a, stack_b);
+}

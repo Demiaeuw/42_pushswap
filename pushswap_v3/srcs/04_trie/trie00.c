@@ -25,6 +25,7 @@ void	main_trie(t_stack **stack_a, t_stack **stack_b)
 		// Push 3 valeur dans B.
 		step01(stack_a, stack_b);
 		step02(stack_a, stack_b);
+		step03(stack_a, stack_b);
 	// 	// Boucle de trie.
 	// 	step02(stack_a, stack_b);
 	// 	// Push de tout vers A.
