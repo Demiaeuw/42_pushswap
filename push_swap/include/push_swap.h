@@ -21,14 +21,14 @@
 
 typedef struct s_stack
 {
-	int		value;
-	int		index;
-	int		cost;
-	struct s_stack		*target;
-	struct s_stack		*next;
+	struct s_stack	*target;
+	struct s_stack	*next;
+	int			value;
+	int			index;
+	int			cost;
 }	t_stack;
 
-typedef struct	s_data
+typedef struct s_data
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
@@ -53,7 +53,7 @@ void	main_argument(int ac, char **av, t_data *data);
 char	**clean_argument(int ac, char **av);
 void	check_arg_int(char **str);
 t_stack	*addint(t_stack *stack, int value, int index, char **dest);
-int	size_argument(int ac, char **av);
+int		size_argument(int ac, char **av);
 char	*join_arguments(int ac, char **av);
 int		check_is_numbr(char **str);
 int		check_int(char **tab);

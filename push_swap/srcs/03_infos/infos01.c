@@ -62,12 +62,14 @@ void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*temp_a;
 	t_stack	*temp_b;
+	t_stack	*highest_node;
+	int		highest;
 
 	temp_b = *stack_b;
 	while (temp_b)
 	{
-		int highest = INT_MIN;
-		t_stack *highest_node = NULL;
+		highest = INT_MIN;
+		highest_node = NULL;
 		temp_a = *stack_a;
 		while (temp_a)
 		{
