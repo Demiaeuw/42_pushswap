@@ -41,23 +41,20 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b)
 			temp_b = temp_b->next;
 		}
 		if (highest_node == NULL)
-			set_targets_a_p2(&temp_b, *stack_b, &highest_node, &highest);
+		{
+			temp_b = *stack_b;
+			while (temp_b)
+			{
+				if (temp_b->value > highest)
+				{
+					highest = temp_b->value;
+					highest_node = temp_b;
+				}
+				temp_b = temp_b->next;
+			}
+		}
 		temp_a->target = highest_node;
 		temp_a = temp_a->next;
-	}
-}
-
-void	set_targets_a_p2(t_stack *tb, t_stack **sb, t_stack *hn, int h)
-{
-	tb = *sb;
-	while (tb)
-	{
-		if (tb->value > h)
-		{
-			h = tb->value;
-			hn = tb;
-		}
-		tb = tb->next;
 	}
 }
 
@@ -84,22 +81,19 @@ void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
 			temp_a = temp_a->next;
 		}
 		if (highest_node == NULL)
-			set_targets_b_p2(&temp_a, *stack_a, &highest_node, &highest);
+		{
+			temp_a = *stack_a;
+			while (temp_a)
+			{
+				if (temp_a->value > highest)
+				{
+					highest = temp_a->value;
+					highest_node = temp_a;
+				}
+				temp_a = temp_a->next;
+			}
+		}
 		temp_b->target = highest_node;
 		temp_b = temp_b->next;
-	}
-}
-
-void	set_targets_b_p2(t_stack *ta, t_stack **sa, t_stack *hn, int h)
-{
-	ta = *sa;
-	while (ta)
-	{
-		if (ta->value > h)
-		{
-			h = ta->value;
-			hn = ta;
-		}
-		ta = ta->next;
 	}
 }
