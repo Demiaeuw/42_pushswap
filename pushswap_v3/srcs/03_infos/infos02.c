@@ -23,23 +23,28 @@ void	main_cost(t_stack **stack_a, t_stack **stack_b)
 	{
 		cost_a = cost_a_top(*stack_a, current_node);
 		cost_b = cost_target_top(current_node, stack_b);
-
-		if (cost_a >= 0)
-		{
-			if (cost_b >= 0)
-				current_node->cost = get_max(cost_a, cost_b) +1;
-			else
-				current_node->cost = (cost_a + cost_b * -1) +1;
-		}
-		else if (cost_a < 0)
-		{
-			if (cost_b < 0)
-				current_node->cost = get_max(cost_a * -1, cost_b * -1) +1;
-			else
-				current_node->cost = (cost_b + cost_a * -1) +1;
-		}
+		current_node->cost = cost_setup(cost_a, cost_b);
 		current_node = current_node->next;
 	}
+}
+
+int	cost_setup(int cost_a, int cost_b)
+{
+	if (cost_a >= 0)
+	{
+		if (cost_b >= 0)
+			return get_max(cost_a, cost_b) + 1;
+		else
+			return (cost_a + cost_b * -1) + 1;
+	}
+	else if (cost_a < 0)
+	{
+		if (cost_b < 0)
+			return get_max(cost_a * -1, cost_b * -1) + 1;
+		else
+			return (cost_b + cost_a * -1) + 1;
+	}
+	return -1;
 }
 
 void	init_cost(t_stack **stack_a, t_stack **stack_b)
@@ -100,5 +105,3 @@ int	cost_target_top(t_stack *current, t_stack **stack_b)
 		return ((size - target_node->index)* -1);
 	}
 }
-
-

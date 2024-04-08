@@ -84,6 +84,7 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
 t_stack	*lf_target(t_stack *stack, int target_value);
 void	main_cost(t_stack **stack_a, t_stack **stack_b);
+int	cost_setup(int cost_a, int cost_b);
 void	init_cost(t_stack **stack_a, t_stack **stack_b);
 int	cost_a_top(t_stack *stack, t_stack *node);
 int	cost_target_top(t_stack *current, t_stack **stack_b);
