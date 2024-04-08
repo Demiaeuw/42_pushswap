@@ -14,23 +14,12 @@
 
 void	main_trie(t_stack **stack_a, t_stack **stack_b)
 {
-	// check du nombre de valeur pour les tries specifiques
 	if (ft_lstsize(*stack_a) <= 3)
-	{
-		// Trie specifique
 		step00(stack_a, stack_b);
-	}
 	else
 	{
-		// Push 3 valeur dans B.
 		step01(stack_a, stack_b);
 		step02(stack_a, stack_b);
 		step03(stack_a, stack_b);
-	// 	// Boucle de trie.
-	// 	step02(stack_a, stack_b);
-	// 	// Push de tout vers A.
-	// 	step03(stack_a, stack_b);
-	// 	// Verif si la liste est bien trier.
-	// 	step04(stack_a, stack_b);
 	}
 }

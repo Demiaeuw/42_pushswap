@@ -14,8 +14,8 @@
 
 t_stack	*lf_low_node(t_stack *stack)
 {
-	int	lowest;
-	t_stack *lowest_node;
+	int		lowest;
+	t_stack	*lowest_node;
 
 	if (!stack)
 		return (NULL);

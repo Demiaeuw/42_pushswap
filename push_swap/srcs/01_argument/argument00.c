@@ -100,4 +100,3 @@ t_stack	*addint(t_stack *stack, int value, int index, char **dest)
 		return (stack);
 	}
 }
-

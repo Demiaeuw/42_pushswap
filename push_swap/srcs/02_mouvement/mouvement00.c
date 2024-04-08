@@ -14,10 +14,9 @@
 
 void	push(t_stack **stack_from, t_stack **stack_to)
 {
-
 	t_stack	*to_add;
 	t_stack	*new;
-	
+
 	if (ft_lstsize(*stack_from) == 0)
 		return ;
 	to_add = *stack_from;
@@ -32,7 +31,7 @@ void	push(t_stack **stack_from, t_stack **stack_to)
 void	swap(t_stack **stack)
 {
 	t_stack	*first;
-	int	tmp;
+	int		tmp;
 
 	if (!(*stack) || !(*stack)->next)
 		return ;

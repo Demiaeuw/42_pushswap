@@ -53,6 +53,7 @@ UTILS = srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/init_data.c\
 	srcs/utils/utils_pushswap/is_sorted.c\
 	srcs/utils/utils_pushswap/lf_minus_cost.c\
+	srcs/utils/utils_pushswap/lf_target.c\
 	srcs/utils/utils_pushswap/print_list.c\
 	srcs/utils/utils_pushswap/print_noeud_liste.c
 

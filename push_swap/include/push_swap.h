@@ -19,13 +19,13 @@
 # include <limits.h>
 # include "../srcs/utils/ft_printf/includes/ft_printf.h"
 
-typedef struct	s_stack
+typedef struct s_stack
 {
-	int	value;
-	int	index;
-	int	cost;
-	struct s_stack	*target;
-	struct s_stack	*next;
+	int		value;
+	int		index;
+	int		cost;
+	struct s_stack		*target;
+	struct s_stack		*next;
 }	t_stack;
 
 typedef struct	s_data
@@ -34,7 +34,7 @@ typedef struct	s_data
 	t_stack	*stack_b;
 }	t_data;
 
-int	main(int ac, char **av);
+int		main(int ac, char **av);
 
 /*		00_error		*/
 void	errordouble(void);
@@ -55,9 +55,9 @@ void	check_arg_int(char **str);
 t_stack	*addint(t_stack *stack, int value, int index, char **dest);
 int	size_argument(int ac, char **av);
 char	*join_arguments(int ac, char **av);
-int	check_is_numbr(char **str);
-int	check_int(char **tab);
-int	check_duplicate(t_stack *stack, int value);
+int		check_is_numbr(char **str);
+int		check_int(char **tab);
+int		check_duplicate(t_stack *stack, int value);
 
 /*		02_mouvement		*/
 void	push(t_stack **stack_from, t_stack **stack_to);
@@ -83,12 +83,11 @@ void	main_reset_infos(t_stack **stack_a, t_stack **stack_b);
 void	main_target(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_a(t_stack **stack_a, t_stack **stack_b);
 void	set_targets_b(t_stack **stack_a, t_stack **stack_b);
-t_stack	*lf_target(t_stack *stack, int target_value);
 void	main_cost(t_stack **stack_a, t_stack **stack_b);
-int	cost_setup(int cost_a, int cost_b);
+int		cost_setup(int cost_a, int cost_b);
 void	init_cost(t_stack **stack_a, t_stack **stack_b);
-int	cost_a_top(t_stack *stack, t_stack *node);
-int	cost_target_top(t_stack *current, t_stack **stack_b);
+int		cost_a_top(t_stack *stack, t_stack *node);
+int		cost_target_top(t_stack *current, t_stack **stack_b);
 
 /*		04_trie			*/
 void	main_trie(t_stack **stack_a, t_stack **stack_b);
@@ -103,25 +102,26 @@ void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
 void	step03(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
-int	ft_atoi(const char *str);
+int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
 void	add_front(t_stack **stack, t_stack *new);
 t_stack	*ft_lstlast(t_stack *lst);
 t_stack	*lf_big_node(t_stack *stack);
 t_stack	*lf_low_node(t_stack *stack);
-int	lst_mediane_value(t_stack *stack);
+int		lst_mediane_value(t_stack *stack);
 t_stack	*lf_mediane_node(t_stack *stack);
-int	lst_half_max_value(t_stack *stack);
-int	lf_mediane_index(t_stack **stack);
-int	ft_lstsize(t_stack *lst);
+int		lst_half_max_value(t_stack *stack);
+int		lf_mediane_index(t_stack **stack);
+int		ft_lstsize(t_stack *lst);
 void	ft_putendl_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *c);
-int	get_max(int a, int b);
+int		get_max(int a, int b);
 void	init_data(t_data *data);
-int	is_sorted(t_stack *stack);
+int		is_sorted(t_stack *stack);
 t_stack	*lf_minus_cost(t_stack **stack_a);
+t_stack	*lf_target(t_stack *stack, int target_value);
 t_stack	*new_node(int value);
 void	print_list(t_stack *stack);
 void	print_noeud_list(t_stack *stack);

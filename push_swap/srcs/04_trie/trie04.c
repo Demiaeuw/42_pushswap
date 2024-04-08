@@ -15,7 +15,7 @@
 void	step03(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*minus_node;
-	int	med;
+	int		med;
 
 	minus_node = lf_low_node(*stack_b);
 	med = ft_lstsize(*stack_b) / 2;

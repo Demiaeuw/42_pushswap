@@ -111,8 +111,8 @@
 void	step02(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*next_mouve;
-	int	cost_a;
-	int	cost_b;
+	int		cost_a;
+	int		cost_b;
 
 	while (*stack_a != NULL)
 	{
@@ -196,7 +196,3 @@ void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb)
 		}
 	}
 }
-
-
-
-

@@ -16,7 +16,7 @@ t_stack	*lf_minus_cost(t_stack **stack_a)
 {
 	t_stack	*current_node;
 	t_stack	*min_cost_node;
-	int	min_cost;
+	int		min_cost;
 
 	current_node = *stack_a;
 	min_cost_node = current_node;

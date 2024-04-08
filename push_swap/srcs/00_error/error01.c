@@ -15,5 +15,4 @@
 void	errorsorted(void)
 {
 	ft_putendl_fd("Erreur de trie", 2);
-	
 }

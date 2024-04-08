@@ -36,7 +36,7 @@ void	trie_deux(t_stack **stack_a, t_stack **stack_b)
 
 void	trie_trois(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack    *highest_node;
+	t_stack	*highest_node;
 
 	highest_node = lf_big_node(*stack_a);
 	if (*stack_a == highest_node)
@@ -45,4 +45,4 @@ void	trie_trois(t_stack **stack_a, t_stack **stack_b)
 		rra(stack_a, stack_b);
 	if ((*stack_a)->value > (*stack_a)->next->value)
 		sa(stack_a, stack_b);
-}	
+}

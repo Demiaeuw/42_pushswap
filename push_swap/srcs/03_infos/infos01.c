@@ -22,12 +22,14 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*temp_a;
 	t_stack	*temp_b;
+	t_stack	*highest_node;
+	int		highest;
 
 	temp_a = *stack_a;
 	while (temp_a)
 	{
-		int highest = INT_MIN;
-		t_stack *highest_node = NULL;
+		highest = INT_MIN;
+		highest_node = NULL;
 		temp_b = *stack_b;
 		while (temp_b)
 		{
@@ -92,17 +94,4 @@ void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
 		temp_b->target = highest_node;
 		temp_b = temp_b->next;
 	}
-}
-
-t_stack	*lf_target(t_stack *stack, int target_value)
-{
-	t_stack *temp = stack;
-
-	while (temp != NULL)
-	{
-		if (temp->value == target_value)
-			return temp;
-		temp = temp->next;
-	}
-	return NULL;
 }
