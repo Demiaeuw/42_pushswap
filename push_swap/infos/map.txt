@@ -48,6 +48,7 @@ a faire :
 		-> Check norme.
 		-> Ajout de tout les "return".
 		-> Virer les commentaires.
+		-> Verif des fichiers.
 
 
 
