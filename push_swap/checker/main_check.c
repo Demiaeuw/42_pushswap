@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error01.c                                          :+:      :+:    :+:   */
+/*   main_check.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 21:16:47 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 21:17:43 by acabarba         ###   ########.fr       */
+/*   Created: 2024/04/10 03:14:25 by acabarba          #+#    #+#             */
+/*   Updated: 2024/04/10 03:14:25 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../include/checker.h"
 
-void	errorsorted(void)
+int	main(int ac, char **av)
 {
-	ft_putendl_fd("Erreur de trie", 2);
-}
+	t_data	data;
 
-void	errorbase(void)
-{
-	ft_putendl_fd("Error", 2);
+	if (ac <= 2)
+		return (0);
+
+	init_data(&data);
+	main_argument(ac, av, &data);
+	main_trie(&data.stack_a, &data.stack_b);
+	checker_ps(&data.stack_a, &data.stack_b);
+	checker_result(&data.stack_a, &data.stack_b);
+	liberer_data(&data);
 }

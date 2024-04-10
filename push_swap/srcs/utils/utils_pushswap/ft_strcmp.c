@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error01.c                                          :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 21:16:47 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 21:17:43 by acabarba         ###   ########.fr       */
+/*   Created: 2024/04/10 03:37:54 by acabarba          #+#    #+#             */
+/*   Updated: 2024/04/10 03:37:54 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/push_swap.h"
+#include "../../../include/push_swap.h"
 
-void	errorsorted(void)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	ft_putendl_fd("Erreur de trie", 2);
-}
+	int	i;
 
-void	errorbase(void)
-{
-	ft_putendl_fd("Error", 2);
+	i = 0;
+	while (s1[i] == s2[i])
+	{
+		if (s1[i] == 0)
+		{
+			return (0);
+		}
+		i++;
+	}
+	return (s1[i] - s2[i]);
 }
