@@ -41,4 +41,9 @@ srcs
 
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.
+		get_next_line	-> Fonction lié a l'utilisation de GNL.
 		utils_pushswap	-> Fonction utiles en lien avec pushswap.
+
+checker
+	check01	-> Fonction divers pour le checker de push_swap.
+	check00	-> Main pour checker.

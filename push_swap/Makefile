@@ -59,9 +59,7 @@ UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/print_list.c\
 	srcs/utils/utils_pushswap/print_noeud_liste.c
 
-SRCSCHECK =	srcs/utils/get_next_line/get_next_line00.c\
-		srcs/utils/get_next_line/get_next_line01.c\
-		checker/main_check.c\
+SRCSCHECK =	checker/check00.c\
 		checker/check01.c\
 		srcs/00_error/error00.c\
 		srcs/00_error/error01.c\
@@ -82,7 +80,9 @@ SRCSCHECK =	srcs/utils/get_next_line/get_next_line00.c\
 		srcs/04_trie/trie01.c\
 		srcs/04_trie/trie02.c\
 		srcs/04_trie/trie03.c\
-		srcs/04_trie/trie04.c
+		srcs/04_trie/trie04.c\
+		srcs/utils/get_next_line/get_next_line00.c\
+		srcs/utils/get_next_line/get_next_line01.c
 		
 
 
