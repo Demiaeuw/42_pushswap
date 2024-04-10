@@ -32,7 +32,6 @@ void	checker_ps(t_stack **stack_a, t_stack **stack_b)
 		}
 		free(ligne);
 		ligne = get_next_line(0);
-
 	}
 	free(ligne);
 }

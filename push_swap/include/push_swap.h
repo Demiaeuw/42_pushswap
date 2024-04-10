@@ -116,7 +116,7 @@ int		lf_mediane_index(t_stack **stack);
 int		ft_lstsize(t_stack *lst);
 void	ft_putendl_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
-int	ft_strcmp(const char *s1, const char *s2);
+int		ft_strcmp(const char *s1, const char *s2);
 size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 size_t	ft_strlen(const char *c);
 int		get_max(int a, int b);
