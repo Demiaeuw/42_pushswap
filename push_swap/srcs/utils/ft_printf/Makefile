@@ -25,19 +25,19 @@ NAME = ft_printf.a
 INCLUDES = includes
 
 .c.o: ft_printf.h
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(<:.c=.o)
+	@$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $(<:.c=.o)
 
 OBJS = $(SRCS:.c=.o)
 
 all : $(NAME)
 
 $(NAME) : $(OBJS)
-	ar -rc	 $(NAME) $(OBJS)
+	@ar -rc	 $(NAME) $(OBJS)
 
 clean :
-	$(RM) $(OBJS)
+	@$(RM) $(OBJS)
 
 fclean : clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
-re : fclean $(NAME)
+re : fclean all
