@@ -23,5 +23,5 @@ int	main(int ac, char **av)
 	main_trie(&data.stack_a, &data.stack_b);
 	checker_ps(&data.stack_a, &data.stack_b);
 	checker_result(&data.stack_a, &data.stack_b);
-	liberer_data(&data);
+	// liberer_data(&data);
 }

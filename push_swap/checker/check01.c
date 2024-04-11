@@ -33,15 +33,15 @@ void	checker_ps(t_stack **stack_a, t_stack **stack_b)
 		free(ligne);
 		ligne = get_next_line(0);
 	}
-	free(ligne);
+	// free(ligne);
 }
 
 void	checker_result(t_stack **stack_a, t_stack **stack_b)
 {
 	if (is_sorted(*stack_a))
-		ft_printf("OK");
+		ft_printf("OK\n");
 	else
-		ft_printf("KO");
+		ft_printf("KO\n");
 	if (*stack_a)
 		liberer_liste(*stack_a);
 	if (*stack_b)

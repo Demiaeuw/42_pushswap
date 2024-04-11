@@ -97,6 +97,8 @@ CFLAGS = -Wall -Wextra -Werror
 # Règle par défaut
 all: printhader printactionobj $(NAME) printend
 checker: printhader printhadercheck printactionobj $(NAMECHECK) printendcheck
+fast: $(NAME)
+fastcheck: $(NAMECHECK)
 
 # Règle pour créer l'exécutable
 $(NAME): $(OBJS) $(OBJSUTILS)
@@ -205,52 +207,94 @@ printactionobj:
 	@echo " "
 
 printend:
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "   Utilitaire : \033[94m./push_swap\033[0m est utilisable."
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 
 printendcheck:
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "   Utilitaire : \033[94m./swap_push_check\033[0m est utilisable."
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 
 printfclen:
-	@sleep 1
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "   Tous les fichiers sont supprimé 🚮"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
-	@sleep 1
+	@sleep 0.1
 	@echo "   \033[32mMerci d'avoir utilisé\033[0m \033[94mpush_swap\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo "\033[94m _________________________________________________ \033[0m"
+	@sleep 0.1
 	@echo "\033[94m|_________________________________________________|\033[0m"
+	@sleep 0.1
 	@echo " "
+	@sleep 0.1
 	@echo " "
-	@sleep 1
+	@sleep 0.1
