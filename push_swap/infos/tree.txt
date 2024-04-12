@@ -28,8 +28,9 @@ srcs
 		mouvement04	-> Reverse_rotate.
 	03_infos
 		infos00	-> Gestion des index.
-		infos01 -> Gestion des targets.
-		infos02	-> Gestion des cost.
+		infos01 -> Gestion des targets A.
+		infos02	-> Gestion des targets B.
+		infos03	-> Gestion des cost.
 	03_trie
 		trie00	-> Main trie.
 		trie01	-> Step00 : Trie specifique.

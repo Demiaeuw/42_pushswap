@@ -31,69 +31,39 @@ void	set_targets_a(t_stack **stack_a, t_stack **stack_b)
 		highest = INT_MIN;
 		highest_node = NULL;
 		temp_b = *stack_b;
-		while (temp_b)
-		{
-			if (temp_b->value > highest && temp_a->value > temp_b->value)
-			{
-				highest = temp_b->value;
-				highest_node = temp_b;
-			}
-			temp_b = temp_b->next;
-		}
+		find_highest_node_a(&temp_b, temp_a, &highest_node, &highest);
 		if (highest_node == NULL)
 		{
 			temp_b = *stack_b;
-			while (temp_b)
-			{
-				if (temp_b->value > highest)
-				{
-					highest = temp_b->value;
-					highest_node = temp_b;
-				}
-				temp_b = temp_b->next;
-			}
+			find_highest_node_null_a(&temp_b, &highest_node, &highest);
 		}
 		temp_a->target = highest_node;
 		temp_a = temp_a->next;
 	}
 }
 
-void	set_targets_b(t_stack **stack_a, t_stack **stack_b)
+void	find_highest_node_a(t_stack **tb, t_stack *ta, t_stack **hn, int *h)
 {
-	t_stack	*temp_a;
-	t_stack	*temp_b;
-	t_stack	*highest_node;
-	int		highest;
-
-	temp_b = *stack_b;
-	while (temp_b)
+	while (*tb)
 	{
-		highest = INT_MIN;
-		highest_node = NULL;
-		temp_a = *stack_a;
-		while (temp_a)
+		if ((*tb)->value > *h && ta->value > (*tb)->value)
 		{
-			if (temp_a->value > highest && temp_b->value > temp_a->value)
-			{
-				highest = temp_a->value;
-				highest_node = temp_a;
-			}
-			temp_a = temp_a->next;
+			*h = (*tb)->value;
+			*hn = *tb;
 		}
-		if (highest_node == NULL)
+		*tb = (*tb)->next;
+	}
+}
+
+void	find_highest_node_null_a(t_stack **tb, t_stack **hn, int *h)
+{
+	while (*tb)
+	{
+		if ((*tb)->value > *h)
 		{
-			temp_a = *stack_a;
-			while (temp_a)
-			{
-				if (temp_a->value > highest)
-				{
-					highest = temp_a->value;
-					highest_node = temp_a;
-				}
-				temp_a = temp_a->next;
-			}
+			*h = (*tb)->value;
+			*hn = *tb;
 		}
-		temp_b->target = highest_node;
-		temp_b = temp_b->next;
+		*tb = (*tb)->next;
 	}
 }

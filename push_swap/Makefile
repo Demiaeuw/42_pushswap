@@ -31,6 +31,7 @@ SRCS =	main.c\
 	srcs/03_infos/infos00.c\
 	srcs/03_infos/infos01.c\
 	srcs/03_infos/infos02.c\
+	srcs/03_infos/infos03.c\
 	srcs/04_trie/trie00.c\
 	srcs/04_trie/trie01.c\
 	srcs/04_trie/trie02.c\
@@ -76,6 +77,7 @@ SRCSCHECK =	checker/check00.c\
 		srcs/03_infos/infos00.c\
 		srcs/03_infos/infos01.c\
 		srcs/03_infos/infos02.c\
+		srcs/03_infos/infos03.c\
 		srcs/04_trie/trie00.c\
 		srcs/04_trie/trie01.c\
 		srcs/04_trie/trie02.c\
@@ -97,8 +99,8 @@ CFLAGS = -Wall -Wextra -Werror
 # Règle par défaut
 all: printhader printactionobj $(NAME) printend
 checker: printhader printhadercheck printactionobj $(NAMECHECK) printendcheck
-fast: $(NAME)
-fastcheck: $(NAMECHECK)
+rapide: $(NAME)
+rapidecheck: $(NAMECHECK)
 
 # Règle pour créer l'exécutable
 $(NAME): $(OBJS) $(OBJSUTILS)
