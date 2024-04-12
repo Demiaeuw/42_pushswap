@@ -94,7 +94,9 @@ OBJSUTILS = $(UTILS:.c=.o)
 OBJSCHECK = $(SRCSCHECK:.c=.o)
 
 # Flags de compilation
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
+RM = rm -f
 
 # Règle par défaut
 all: printhader printactionobj $(NAME) printend
@@ -126,16 +128,17 @@ $(NAMECHECK): $(OBJSCHECK) $(OBJSUTILS)
 	@$(CC) $(CFLAGS) -o $(NAMECHECK) $(OBJSCHECK) $(OBJSUTILS)  ./srcs/utils/ft_printf/ft_printf.a
 
 # Règle pour un programme propre
-clear: all checker clean
+exe: all clean
+exechecker: checker clean
 
 # Règle pour nettoyer les fichiers objets
 clean:
 	@$(MAKE) clean -C ./srcs/utils/ft_printf
-	@rm -f $(OBJS) $(OBJSUTILS) $(OBJSCHECK)
+	@$(RM) $(OBJS) $(OBJSUTILS) $(OBJSCHECK)
 
 fclean: clean
 	@$(MAKE) fclean -C ./srcs/utils/ft_printf
-	@rm -f $(NAME) $(NAMECHECK)
+	@$(RM) $(NAME) $(NAMECHECK)
 	$(MAKE) printfclen
 
 re: fclean all
