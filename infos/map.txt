@@ -41,8 +41,6 @@ fait :
 		-> commencer a trier pour qu'elles soient dans un ordre decroissant dans B.
 		-> Tout re-push dans A.
 
-a faire :
-
 	- Clean le code
 		-> Check les fonctions non autorisée.
 		-> Check norme.
@@ -50,6 +48,9 @@ a faire :
 		-> Virer les commentaires.
 		-> Verif des fichiers.
 
+a faire :
+
+		OK
 
 
 Divers : 

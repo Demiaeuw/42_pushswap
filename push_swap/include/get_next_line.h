@@ -23,6 +23,7 @@
 char	*get_next_line(int fd);
 char	*gnl_ad_to_stash(int fd, char *s);
 char	*gnl_line(char *stash);
+char	*create_new_stash(char *stash, int i);
 char	*gnl_clean_static(char *stash);
 /*			get_next_line_utils	*/
 char	*gnl_strchr(const char *s, int c);

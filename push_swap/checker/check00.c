@@ -20,8 +20,6 @@ int	main(int ac, char **av)
 		return (0);
 	init_data(&data);
 	main_argument(ac, av, &data);
-	main_trie(&data.stack_a, &data.stack_b);
 	checker_ps(&data.stack_a, &data.stack_b);
 	checker_result(&data.stack_a, &data.stack_b);
-	// liberer_data(&data);
 }

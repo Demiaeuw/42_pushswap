@@ -82,20 +82,11 @@ char	*gnl_line(char *stash)
 }
 
 //fonction qui clean la static et garde de '\n' a la fin 
-char	*gnl_clean_static(char *stash)
+char	*create_new_stash(char *stash, int i)
 {
-	int		i;
 	int		j;
 	char	*new_stash;
 
-	i = 0;
-	while (stash[i] && stash[i] != '\n')
-		i++;
-	if (!stash[i])
-	{
-		free(stash);
-		return (NULL);
-	}
 	new_stash = gnl_calloc((gnl_strlen(stash) - i + 1), sizeof(char));
 	if (!new_stash)
 		return (NULL);
@@ -107,6 +98,28 @@ char	*gnl_clean_static(char *stash)
 		i++;
 		j++;
 	}
+	return (new_stash);
+}
+
+char	*gnl_clean_static(char *stash)
+{
+	int		i;
+	char	*new_stash;
+
+	i = 0;
+	while (stash[i] && stash[i] != '\n')
+		i++;
+	if (!stash[i])
+	{
+		free(stash);
+		return (NULL);
+	}
+	new_stash = create_new_stash(stash, i);
 	free(stash);
+	if (new_stash[0] == '\0')
+	{
+		free(new_stash);
+		return (NULL);
+	}
 	return (new_stash);
 }

@@ -33,7 +33,6 @@ void	checker_ps(t_stack **stack_a, t_stack **stack_b)
 		free(ligne);
 		ligne = get_next_line(0);
 	}
-	// get_next_line(-1);
 	free(ligne);
 }
 
@@ -52,20 +51,20 @@ void	checker_result(t_stack **stack_a, t_stack **stack_b)
 
 int	mouve00(char *ligne, t_stack **stack_a, t_stack **stack_b)
 {
-	if (!(ft_strcmp(ligne, "sa")))
+	if (!(ft_strcmp(ligne, "sa\n")))
 		swap(stack_a);
-	else if (!(ft_strcmp(ligne, "sb")))
+	else if (!(ft_strcmp(ligne, "sb\n")))
 		swap(stack_b);
-	else if (!(ft_strcmp(ligne, "ss")))
+	else if (!(ft_strcmp(ligne, "ss\n")))
 	{
 		swap(stack_a);
 		swap(stack_b);
 	}
-	else if (!(ft_strcmp(ligne, "ra")))
+	else if (!(ft_strcmp(ligne, "ra\n")))
 		rotate(stack_a);
-	else if (!(ft_strcmp(ligne, "rb")))
+	else if (!(ft_strcmp(ligne, "rb\n")))
 		rotate(stack_b);
-	else if (!(ft_strcmp(ligne, "rr")))
+	else if (!(ft_strcmp(ligne, "rr\n")))
 	{
 		rotate(stack_a);
 		rotate(stack_b);
@@ -77,15 +76,15 @@ int	mouve00(char *ligne, t_stack **stack_a, t_stack **stack_b)
 
 int	mouve01(char *ligne, t_stack **stack_a, t_stack **stack_b)
 {
-	if (!(ft_strcmp(ligne, "pa")))
+	if (!(ft_strcmp(ligne, "pa\n")))
 		push(stack_b, stack_a);
-	else if (!(ft_strcmp(ligne, "pb")))
+	else if (!(ft_strcmp(ligne, "pb\n")))
 		push(stack_a, stack_b);
-	else if (!(ft_strcmp(ligne, "rra")))
+	else if (!(ft_strcmp(ligne, "rra\n")))
 		reverse_rotate(stack_a);
-	else if (!(ft_strcmp(ligne, "rrb")))
+	else if (!(ft_strcmp(ligne, "rrb\n")))
 		reverse_rotate(stack_b);
-	else if (!(ft_strcmp(ligne, "rrr")))
+	else if (!(ft_strcmp(ligne, "rrr\n")))
 	{
 		reverse_rotate(stack_a);
 		reverse_rotate(stack_b);
