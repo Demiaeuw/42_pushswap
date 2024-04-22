@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:44 by acabarba          #+#    #+#              #
-#    Updated: 2024/04/07 16:32:44 by acabarba         ###   ########.fr        #
+#    Updated: 2024/04/22 19:49:26 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,11 +34,9 @@ srcs
 	03_trie
 		trie00	-> Main trie.
 		trie01	-> Step00 : Trie specifique.
-		trie02	-> Step01 : Push 3 valeur dans B.
+		trie02	-> Step01 : Push 2 valeur dans B + Init cost + Index
 		trie03	-> Step02 : Boucle de trie.
 		trie04	-> Step03 : Push de tout vers A.
-		trie05  -> Step03 : Suite.
-		trie06	-> Step04 : Verif si la liste est bien trier.
 
 	utils
 		ft_printf	-> Ajout de la fonction printf maison.
@@ -46,5 +44,5 @@ srcs
 		utils_pushswap	-> Fonction utiles en lien avec pushswap.
 
 checker
-	check01	-> Fonction divers pour le checker de push_swap.
 	check00	-> Main pour checker.
+	check01	-> Fonction divers pour le checker de push_swap.
