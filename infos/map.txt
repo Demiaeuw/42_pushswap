@@ -3,13 +3,14 @@
 #                                                         :::      ::::::::    #
 #    map.txt                                            :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
+#    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:50 by acabarba          #+#    #+#              #
-#    Updated: 2024/04/07 16:32:50 by acabarba         ###   ########.fr        #
+#    Updated: 2024/04/30 16:16:04 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+test
 fait :
 
 	- Gestion d'erreurs.
