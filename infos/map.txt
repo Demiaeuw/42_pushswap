@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:50 by acabarba          #+#    #+#              #
-#    Updated: 2024/04/30 16:16:04 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/04 00:25:02 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,3 +58,6 @@ Divers :
 
 	- commande bash pour ajouter et lancer le visualizer
 		make && git clone https://github.com/o-reo/push_swap_visualizer.git && cd push_swap_visualizer && mkdir build && cd build && cmake .. && make && ./bin/visualizer
+
+	- commande bash pour tester le nb de coup (a la racine apres make) (test pour 500 entry, 100 test different, limite max a 5500)
+		git clone https://github.com/SimonCROS/push_swap_tester.git && cd push_swap_tester && make fr && /complexity 500 1000 5500
