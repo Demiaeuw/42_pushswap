@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:52:26 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 23:46:29 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/03 23:45:05 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,8 @@ void	main_trie(t_stack **stack_a, t_stack **stack_b);
 void	step00(t_stack **stack_a, t_stack **stack_b);
 void	trie_deux(t_stack **stack_a, t_stack **stack_b);
 void	trie_trois(t_stack **stack_a, t_stack **stack_b);
+void	trie_quatre(t_stack **stack_a, t_stack **stack_b);
+void	trie_cinq(t_stack **stack_a, t_stack **stack_b);
 void	step01(t_stack **stack_a, t_stack **stack_b);
 void	step02(t_stack **stack_a, t_stack **stack_b);
 void	handle_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
