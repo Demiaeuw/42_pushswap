@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argument00.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 21:01:42 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 21:57:36 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/04 11:57:55 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	main_argument(int ac, char **av, t_data *data)
 	char	**dest;
 	int		i;
 
-	i = 0;
+	i = -1;
 	dest = clean_argument(ac, av);
 	check_arg_int(dest);
 	if (ac == 1)
@@ -27,11 +27,14 @@ void	main_argument(int ac, char **av, t_data *data)
 		ft_printf("Erreur, Ajouter des valeurs pour le trie\n");
 		exit(0);
 	}
-	while (dest[i])
+	if (ac == 2)
 	{
-		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);
-		i++;
+		liberer_str_tab(dest);
+		liberer_data(data);
+		exit(0);
 	}
+	while (dest[++i])
+		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);
 	liberer_str_tab(dest);
 	if (is_sorted(data->stack_a))
 		error_is_sorted(data);

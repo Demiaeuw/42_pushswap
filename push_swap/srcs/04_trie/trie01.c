@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:32:18 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/04 00:19:30 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/04 11:44:45 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,11 @@ void	step00(t_stack **stack_a, t_stack **stack_b)
 
 	size = ft_lstsize(*stack_a);
 	if (size == 1)
-		return ;
+	{
+		liberer_liste(*stack_a);
+		liberer_liste(*stack_b);
+		exit(0);
+	}
 	else if (size == 2)
 		trie_deux(stack_a, stack_b);
 	else if (size == 3)
