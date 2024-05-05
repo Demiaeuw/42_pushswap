@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:32:18 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/05 19:49:22 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 21:02:20 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,14 @@ void	step00(t_stack **stack_a, t_stack **stack_b)
 	else if (size == 4)
 		trie_quatre(stack_a, stack_b);
 	else if (size == 5)
-		trie_cinq(stack_a, stack_b);
+	{
+		if (is_rev_sorted(*stack_a))
+			cinq_s_t(stack_a, stack_b);
+		if (is_cinq_sorted(*stack_a))
+			cinq_s_t_deux(stack_a, stack_b);
+		else
+			trie_cinq(stack_a, stack_b);
+	}
 	main_index(stack_a, stack_b);
 	return ;
 }

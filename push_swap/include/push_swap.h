@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:52:26 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/05 19:49:47 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 21:05:57 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,6 +109,8 @@ void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
 void	step03(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
+void    cinq_s_t(t_stack **stack_a, t_stack **stack_b);
+void	cinq_s_t_deux(t_stack **stack_a, t_stack **stack_b);
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
 void	add_front(t_stack **stack, t_stack *new);
@@ -129,6 +131,7 @@ int		get_max(int a, int b);
 void	init_data(t_data *data);
 int		is_sorted(t_stack *stack);
 int		is_rev_sorted(t_stack *stack);
+int		is_cinq_sorted(t_stack *stack);
 t_stack	*lf_minus_cost(t_stack **stack_a);
 t_stack	*lf_target(t_stack *stack, int target_value);
 t_stack	*new_node(int value);
