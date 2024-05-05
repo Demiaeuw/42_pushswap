@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 16:49:39 by acabarba          #+#    #+#             */
-/*   Updated: 2024/04/07 16:49:39 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 15:05:05 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,7 @@ int	main(int ac, char **av)
 	init_data(&data);
 	main_argument(ac, av, &data);
 	main_trie(&data.stack_a, &data.stack_b);
+	//
+	print_list(&(*data.stack_a));
 	liberer_data(&data);
 }

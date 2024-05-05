@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 20:51:14 by acabarba          #+#    #+#              #
-#    Updated: 2024/05/05 13:56:19 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/05 14:53:46 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,8 @@ UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/lf_minus_cost.c\
 	srcs/utils/utils_pushswap/lf_target.c\
 	srcs/utils/utils_pushswap/print_list.c\
-	srcs/utils/utils_pushswap/print_noeud_liste.c
+	srcs/utils/utils_pushswap/print_noeud_liste.c\
+	srcs/utils/utils_pushswap/specifique_cas_cinq.c
 
 SRCSCHECK =	checker/check00.c\
 		checker/check01.c\
