@@ -135,5 +135,6 @@ t_stack	*lf_target(t_stack *stack, int target_value);
 t_stack	*new_node(int value);
 void	print_list(t_stack *stack);
 void	print_noeud_list(t_stack *stack);
+void	specifique_cas_cinq(t_stack **stack_a, t_stack **stack_b);
 
 #endif

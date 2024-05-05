@@ -19,5 +19,7 @@ int	main(int ac, char **av)
 	init_data(&data);
 	main_argument(ac, av, &data);
 	main_trie(&data.stack_a, &data.stack_b);
+	//
+	print_list(&(*data.stack_a));
 	liberer_data(&data);
 }

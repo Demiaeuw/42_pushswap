@@ -12,7 +12,7 @@
 
 # Nom de l'executable
 NAME = push_swap
-NAMECHECK = swap_push_check
+NAMECHECK = check
 
 # Fichiers source
 SRCS =	main.c\
@@ -59,7 +59,8 @@ UTILS =	srcs/utils/utils_pushswap/cinq_s_t.c\
 	srcs/utils/utils_pushswap/lf_minus_cost.c\
 	srcs/utils/utils_pushswap/lf_target.c\
 	srcs/utils/utils_pushswap/print_list.c\
-	srcs/utils/utils_pushswap/print_noeud_liste.c
+	srcs/utils/utils_pushswap/print_noeud_liste.c\
+	srcs/utils/utils_pushswap/specifique_cas_cinq.c
 
 SRCSCHECK =	checker/check00.c\
 		checker/check01.c\

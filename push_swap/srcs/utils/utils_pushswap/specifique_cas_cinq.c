@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_list.c                                       :+:      :+:    :+:   */
+/*   specifique_cas_cinq.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/28 22:21:24 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/05 15:41:02 by acabarba         ###   ########.fr       */
+/*   Created: 2024/05/05 14:44:30 by acabarba          #+#    #+#             */
+/*   Updated: 2024/05/05 15:23:41 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../include/push_swap.h"
 
-void	print_list(t_stack *stack)
+void	specifique_cas_cinq(t_stack **stack_a, t_stack **stack_b)
 {
-	while (stack)
-	{
-		printf("Value: %d, Index: %d, Target : %d, Cost : %d\n",
-			stack->value, stack->index,
-			stack->target ? stack->target->value : -1,
-			stack->cost);
-		stack = stack->next;
-	}
+	rra(stack_a, stack_b);
+	pb(stack_a, stack_b);
+	sa(stack_a, stack_b);
+	ra(stack_a, stack_b);
+	ra(stack_a, stack_b);
+	sa(stack_a, stack_b);
+	pa(stack_a, stack_b);
 }
