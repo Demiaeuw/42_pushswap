@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 20:52:26 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/03 23:45:05 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 19:49:47 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,6 +128,7 @@ size_t	ft_strlen(const char *c);
 int		get_max(int a, int b);
 void	init_data(t_data *data);
 int		is_sorted(t_stack *stack);
+int		is_rev_sorted(t_stack *stack);
 t_stack	*lf_minus_cost(t_stack **stack_a);
 t_stack	*lf_target(t_stack *stack, int target_value);
 t_stack	*new_node(int value);
