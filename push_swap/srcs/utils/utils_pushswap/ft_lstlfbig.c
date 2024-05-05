@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlfbig.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 02:41:16 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/29 02:41:16 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 16:56:37 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

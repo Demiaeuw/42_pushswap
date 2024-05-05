@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 22:21:24 by acabarba          #+#    #+#             */
-/*   Updated: 2024/03/28 22:23:59 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/05 15:41:02 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

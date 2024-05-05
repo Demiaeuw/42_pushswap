@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
+#    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 20:51:14 by acabarba          #+#    #+#              #
-#    Updated: 2024/03/28 23:34:46 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/05 17:14:38 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,8 @@ SRCS =	main.c\
 	srcs/04_trie/trie03.c\
 	srcs/04_trie/trie04.c
 
-UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
+UTILS =	srcs/utils/utils_pushswap/cinq_s_t.c\
+	srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\
 	srcs/utils/utils_pushswap/ft_lstaddfront.c\
 	srcs/utils/utils_pushswap/ft_lstlast.c\
