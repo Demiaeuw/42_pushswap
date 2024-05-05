@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+         #
+#    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 20:51:14 by acabarba          #+#    #+#              #
-#    Updated: 2024/03/28 23:34:46 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/05 13:56:19 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Nom de l'executable
 NAME = push_swap
-NAMECHECK = swap_push_check
+NAMECHECK = check
 
 # Fichiers source
 SRCS =	main.c\
