@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error00.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 21:15:08 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/04 12:31:16 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/19 16:56:55 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,8 @@ void	errorinttaille(void)
 
 void	error_is_sorted(t_data *data)
 {
-	ft_putendl_fd("\nCette liste est \033[32mdeja triee\033[0m\n", 2);
+	// ft_putendl_fd("\nCette liste est \033[32mdeja triee\033[0m\n", 2);
+	// ft_putendl_fd("ok", 2);
 	liberer_data(data);
 	exit (0);
 }

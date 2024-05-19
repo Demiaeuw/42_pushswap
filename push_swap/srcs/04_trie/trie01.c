@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   trie01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:32:18 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/05 21:02:20 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/19 18:30:57 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,29 +71,5 @@ void	trie_quatre(t_stack **stack_a, t_stack **stack_b)
 		ra(stack_a, stack_b);
 	pb(stack_a, stack_b);
 	trie_trois(stack_a, stack_b);
-	pa(stack_a, stack_b);
-}
-
-void	trie_cinq(t_stack **stack_a, t_stack **stack_b)
-{
-	t_stack	*smallest_node;
-	int		stack_size;
-
-	stack_size = ft_lstsize(*stack_a);
-	while (ft_lstsize(*stack_a) > 3)
-	{
-		smallest_node = lf_low_node(*stack_a);
-		while (*stack_a != smallest_node)
-			ra(stack_a, stack_b);
-		pb(stack_a, stack_b);
-	}
-	trie_trois(stack_a, stack_b);
-	if (stack_size == 5)
-	{
-		smallest_node = lf_low_node(*stack_b);
-		if (*stack_b == smallest_node)
-			sb(stack_a, stack_b);
-		pa(stack_a, stack_b);
-	}
 	pa(stack_a, stack_b);
 }

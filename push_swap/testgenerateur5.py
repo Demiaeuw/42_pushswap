@@ -5,4 +5,4 @@ permutations = list(itertools.permutations(numbers))
 
 with open('test5.txt', 'w') as f:
     for p in permutations:
-        f.write('./push_swap ' + ' '.join(map(str, p)) + '\n')
+        f.write('ARG="' + ' '.join(map(str, p)) + '"; ' + './push_swap $ARG ' + '\n')

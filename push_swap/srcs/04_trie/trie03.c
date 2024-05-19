@@ -3,14 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   trie03.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:32:49 by acabarba          #+#    #+#             */
-/*   Updated: 2024/04/22 19:46:20 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/19 16:50:47 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../include/push_swap.h"
+
+void	step01(t_stack **stack_a, t_stack **stack_b)
+{
+	pb(stack_a, stack_b);
+	pb(stack_a, stack_b);
+	main_index(stack_a, stack_b);
+	init_cost(stack_a, stack_b);
+}
 
 void	step02(t_stack **stack_a, t_stack **stack_b)
 {
