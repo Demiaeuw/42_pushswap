@@ -6,7 +6,7 @@
 /*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/07 17:32:24 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/19 18:32:15 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/19 18:57:20 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	trie_cinq(t_stack **stack_a, t_stack **stack_b)
 {
-		mouve_five_00(stack_a, stack_b);
-		mouve_five_01(stack_a, stack_b);
+		move_five_00(stack_a, stack_b);
+		move_five_01(stack_a, stack_b);
 		trie_trois(stack_a, stack_b);
 		pa(stack_a, stack_b);
 		pa(stack_a, stack_b);

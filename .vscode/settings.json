@@ -4,6 +4,7 @@
 		"stdarg.h": "c",
 		"push_swap.h": "c",
 		"stdio.h": "c",
-		"checker.h": "c"
+		"checker.h": "c",
+		"random": "c"
 	}
 }

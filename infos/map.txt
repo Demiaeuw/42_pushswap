@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:50 by acabarba          #+#    #+#              #
-#    Updated: 2024/05/19 16:22:41 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/19 19:01:30 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,7 @@ fait :
 
 	- Algo de trie		nombre de coup pour 500 valeurs : 5500
 						    100 valeurs : 700
-						     50 valeurs : ????
-						     10	valeurs : ????
-						      5 valeurs : ????
+						      5 valeurs : 12
 						      3 valeurs : 3
 		-> Push les trois valeurs dans B.
 		-> commencer a trier pour qu'elles soient dans un ordre decroissant dans B.
