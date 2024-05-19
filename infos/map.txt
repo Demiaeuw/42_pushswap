@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    map.txt                                            :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+         #
+#    By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/07 16:32:50 by acabarba          #+#    #+#              #
-#    Updated: 2024/05/04 00:25:02 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/19 16:22:41 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,4 +60,4 @@ Divers :
 		make && git clone https://github.com/o-reo/push_swap_visualizer.git && cd push_swap_visualizer && mkdir build && cd build && cmake .. && make && ./bin/visualizer
 
 	- commande bash pour tester le nb de coup (test pour 500 entry, 100 test different, limite max a 5500)
-		git clone git@github.com:Demiaeuw/42_pushswap.git && cd 42_pushswap && cd push_swap && make && git clone https://github.com/SimonCROS/push_swap_tester.git && cd push_swap_tester && make fr && ./complexity 500 1000 5500 
+		git clone git@github.com:Demiaeuw/42_pushswap.git && cd 42_pushswap && cd push_swap && make && make checker && git clone https://github.com/SimonCROS/push_swap_tester.git && cd push_swap_tester && make fr && ./complexity 3 1000 3 ../swap_push_check && ./complexity 5 1000 12 ../swap_push_check && ./complexity 500 100 5500 ../swap_push_check 
