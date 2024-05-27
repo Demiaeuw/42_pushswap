@@ -6,13 +6,13 @@
 #    By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 20:51:14 by acabarba          #+#    #+#              #
-#    Updated: 2024/05/27 16:26:56 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/27 18:53:40 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Nom de l'executable
 NAME = push_swap
-NAMECHECK = swap_push_check
+NAMECHECK = checker
 
 # Fichiers source
 SRCS =	main.c\
@@ -60,9 +60,9 @@ UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/print_list.c\
 	srcs/utils/utils_pushswap/print_noeud_liste.c
 
-SRCSCHECK =	checker/check00.c\
-		checker/check01.c\
-		checker/check02.c\
+SRCSCHECK =	checker_srcs/check00.c\
+		checker_srcs/check01.c\
+		checker_srcs/check02.c\
 		srcs/00_error/error00.c\
 		srcs/00_error/error01.c\
 		srcs/00_error/free00.c\
@@ -101,9 +101,9 @@ RM = rm -f
 
 # Règle par défaut
 all: printhader printactionobj $(NAME) printend
-checker: printhader printhadercheck printactionobj $(NAMECHECK) printendcheck
+bonus: printhader printhadercheck printactionobj $(NAMECHECK) printendcheck
 rapide: $(NAME)
-rapidecheck: $(NAMECHECK)
+rapidebonus: $(NAMECHECK)
 
 # Règle pour créer l'exécutable
 $(NAME): $(OBJS) $(OBJSUTILS)
@@ -257,7 +257,7 @@ printendcheck:
 	@sleep 0.1
 	@echo " "
 	@sleep 0.1
-	@echo "   Utilitaire : \033[94m./swap_push_check\033[0m est utilisable."
+	@echo "   Utilitaire : \033[94m./checker\033[0m est utilisable."
 	@sleep 0.1
 	@echo " "
 	@sleep 0.1

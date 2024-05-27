@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   argument00.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 21:01:42 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/05 19:50:50 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/27 18:44:37 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,8 @@ void	main_argument(int ac, char **av, t_data *data)
 	{
 		liberer_str_tab(dest);
 		liberer_data(data);
-		ft_printf("Erreur, Ajouter des valeurs pour le trie\n");
-		exit(0);
-	}
-	if (ac == 2)
-	{
-		liberer_str_tab(dest);
-		liberer_data(data);
+		ft_printf("\n\033[31mError\033[0m\n\n"
+			"Ajouter des valeurs pour le trie\n\n");
 		exit(0);
 	}
 	while (dest[++i])
