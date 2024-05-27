@@ -27,7 +27,7 @@ void	step00(t_stack **stack_a, t_stack **stack_b)
 		trie_deux(stack_a, stack_b);
 	else if (size == 3)
 		trie_trois(stack_a, stack_b);
-	else if (size == 4 && size == 5)
+	else if (size == 4 || size == 5)
 		trie_cinq(stack_a, stack_b);
 	main_index(stack_a, stack_b);
 	return ;

@@ -38,8 +38,7 @@ SRCS =	main.c\
 	srcs/04_trie/trie03.c\
 	srcs/04_trie/trie04.c
 
-UTILS =	srcs/utils/utils_pushswap/cinq_s_p.c\
-	srcs/utils/utils_pushswap/ft_atoi.c\
+UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
 	srcs/utils/utils_pushswap/ft_atol.c\
 	srcs/utils/utils_pushswap/ft_lstaddfront.c\
 	srcs/utils/utils_pushswap/ft_lstlast.c\

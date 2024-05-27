@@ -111,8 +111,6 @@ void	handle_negative_costs(t_stack **sa, t_stack **sb, int *ca, int *cb);
 void	step03(t_stack **stack_a, t_stack **stack_b);
 
 /*		utils			*/
-void    cinq_s_t(t_stack **stack_a, t_stack **stack_b);
-void	cinq_s_t_deux(t_stack **stack_a, t_stack **stack_b);
 int		ft_atoi(const char *str);
 long	ft_atol(const char *str);
 void	add_front(t_stack **stack, t_stack *new);

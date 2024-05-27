@@ -14,11 +14,11 @@
 
 void	trie_cinq(t_stack **stack_a, t_stack **stack_b)
 {
-		move_five_00(stack_a, stack_b);
-		move_five_01(stack_a, stack_b);
-		trie_trois(stack_a, stack_b);
-		pa(stack_a, stack_b);
-		pa(stack_a, stack_b);
+	move_five_00(stack_a, stack_b);
+	move_five_01(stack_a, stack_b);
+	trie_trois(stack_a, stack_b);
+	pa(stack_a, stack_b);
+	pa(stack_a, stack_b);
 }
 
 void	move_five_00(t_stack **stack_a, t_stack **stack_b)

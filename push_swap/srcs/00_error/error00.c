@@ -38,8 +38,6 @@ void	errorinttaille(void)
 
 void	error_is_sorted(t_data *data)
 {
-	// ft_putendl_fd("\nCette liste est \033[32mdeja triee\033[0m\n", 2);
-	// ft_putendl_fd("ok", 2);
 	liberer_data(data);
 	exit (0);
 }

@@ -33,13 +33,3 @@ int	is_rev_sorted(t_stack *stack)
 	}
 	return (1);
 }
-
-int	is_cinq_sorted(t_stack *stack)
-{
-	if (stack->value < stack->next->value && stack->next->value > stack->next->next->value
-		&& stack->next->next->value > stack->next->next->next->value
-		&& stack->next->next->next->value > stack->next->next->next->next->value)
-		return (1);
-	else
-		return (0);
-}
