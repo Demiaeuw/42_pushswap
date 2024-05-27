@@ -6,7 +6,7 @@
 #    By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 20:51:14 by acabarba          #+#    #+#              #
-#    Updated: 2024/05/19 18:28:59 by acabarba         ###   ########.fr        #
+#    Updated: 2024/05/27 16:26:56 by acabarba         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,7 @@ UTILS =	srcs/utils/utils_pushswap/ft_atoi.c\
 
 SRCSCHECK =	checker/check00.c\
 		checker/check01.c\
+		checker/check02.c\
 		srcs/00_error/error00.c\
 		srcs/00_error/error01.c\
 		srcs/00_error/free00.c\

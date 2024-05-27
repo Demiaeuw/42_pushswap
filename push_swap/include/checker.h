@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@student.42Perpignan.    +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 02:45:46 by acabarba          #+#    #+#             */
-/*   Updated: 2024/04/10 02:45:46 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/27 16:26:28 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ void	checker_ps(t_stack **stack_a, t_stack **stack_b);
 void	checker_result(t_stack **stack_a, t_stack **stack_b);
 int		mouve00(char *ligne, t_stack **stack_a, t_stack **stack_b);
 int		mouve01(char *ligne, t_stack **stack_a, t_stack **stack_b);
+void	main_argument_check(int ac, char **av, t_data *data);
+void	error_is_sorted_check(t_data *data);
 
 // // test
 // // static char	*ft_a_next_line(int fd, char *str);
