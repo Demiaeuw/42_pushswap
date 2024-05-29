@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check02.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: acabarba <acabarba@42.fr>                  +#+  +:+       +#+        */
+/*   By: acabarba <acabarba@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 16:24:29 by acabarba          #+#    #+#             */
-/*   Updated: 2024/05/27 16:27:20 by acabarba         ###   ########.fr       */
+/*   Updated: 2024/05/29 20:00:57 by acabarba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,25 +24,13 @@ void	main_argument_check(int ac, char **av, t_data *data)
 	{
 		liberer_str_tab(dest);
 		liberer_data(data);
-		ft_printf("Erreur, Ajouter des valeurs pour le trie\n");
-		exit(0);
-	}
-	if (ac == 2)
-	{
-		liberer_str_tab(dest);
-		liberer_data(data);
+		ft_printf("\n\033[31mError\033[0m\n\n"
+			"Ajouter des valeurs pour le tri\n\n");
 		exit(0);
 	}
 	while (dest[++i])
 		data->stack_a = addint(data->stack_a, ft_atoi(dest[i]), i, dest);
 	liberer_str_tab(dest);
 	if (is_sorted(data->stack_a))
-		error_is_sorted_check(data);
-}
-
-void	error_is_sorted_check(t_data *data)
-{
-	ft_printf("OK\n");
-	liberer_data(data);
-	exit (0);
+		error_is_sorted(data);
 }
